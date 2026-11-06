@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="404 Page Not Found - Looks like this pickle jar is empty or moved. Return to Dadi's Swad homepage.">
+  <title>404 - Jar Not Found | Dadi's Swad</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Navbar (First element at top) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand" aria-label="Dadi's Swad Homepage">
+          <img src="assets/logos/logo.svg" alt="Dadi's Swad Logo" class="logo-light-mode" width="220" height="50">
+          <img src="assets/logos/logo-white.svg" alt="Dadi's Swad Logo" class="logo-dark-mode" width="220" height="50">
+        </a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+          <ul class="nav-menu">
+            <li class="nav-item dropdown">
+              <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="homeDropdownLink">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down dropdown-chevron" aria-hidden="true"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdownLink">
+                <li><a href="index.html" class="dropdown-item"><i class="fa-solid fa-house-chimney"></i><span>Home 1 (General Landing)</span></a></li>
+                <li><a href="home-2.html" class="dropdown-item"><i class="fa-solid fa-jar"></i><span>Home 2 (Pickles Niche)</span></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+            <li class="mobile-cta-item" style="display: none;">
+              <a href="contact.html#order-enquiry" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-cart-shopping"></i> Order Now
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
+            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+            <span>RTL</span>
+          </button>
+
+          <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <a href="contact.html#order-enquiry" class="btn btn-primary nav-cta">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Order Now</span>
+          </a>
+
+          <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 404 Main Content -->
+  <main class="section" style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4.5rem 0;">
+    <div class="container" style="max-width: 680px;">
+      <!-- Vector Barni Illustration -->
+      <div style="width: 140px; height: 140px; margin: 0 auto 2rem auto; position: relative;">
+        <svg viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="46" fill="var(--primary-light)" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4 3"/>
+          <!-- Empty Tilted Ceramic Barni -->
+          <g transform="rotate(18, 50, 50)">
+            <path d="M35 50 C35 75 42 80 50 80 C58 80 65 75 65 50 Z" fill="#F4EBD9" stroke="#9E2A2B" stroke-width="3"/>
+            <path d="M35 50 C35 40 40 34 50 34 C60 34 65 40 65 50 Z" fill="#E39B14" stroke="#9E2A2B" stroke-width="3"/>
+            <rect x="42" y="28" width="16" height="6" rx="2" fill="#9E2A2B"/>
+            <ellipse cx="50" cy="50" rx="10" ry="4" fill="#9E2A2B" opacity="0.3"/>
+          </g>
+          <!-- Dropped chilli / question -->
+          <text x="75" y="40" font-size="24" fill="#9E2A2B" font-weight="900">?</text>
+        </svg>
+      </div>
+
+      <span class="section-tag" style="background: #FEE2E2; color: #DC2626; border-color: #FECACA;">Error 404 • Missing Link</span>
+      <h1 style="font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 1rem;">Oops! This Martaban is Empty</h1>
+      <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2.5rem;">
+        The delicious recipe or page you were hunting for has either been moved, cured in another barni, or eaten clean with a crispy papad!
+      </p>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-house"></i> Return to Homepage
+        </a>
+        <a href="products.html" class="btn btn-outline btn-lg">
+          <i class="fa-solid fa-jar"></i> Browse Our Pickles
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 Dadi's Swad. Handcrafted with love. All rights reserved.</p>
+        <p><a href="index.html">Back to Home</a> • <a href="contact.html">Contact Us</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/rtl.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,429 @@
+/* ==========================================================================
+   Dadi's Swad - Homemade Pickles & Papads Business Template
+   Responsive.css - Complete Responsive Breakpoints & Fluid Adaptations
+   Tested for: 320px, 360px, 375px, 414px, 480px, 768px, 1024px, 1280px, 1440px, 1920px
+   ========================================================================== */
+
+/* 1. Full HD & Large Desktop (1440px - 1920px+) */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1360px;
+  }
+
+  .hero-image-wrapper img {
+    height: 520px;
+  }
+}
+
+/* 2. Standard Desktop & Laptop (1200px - 1280px) */
+@media (max-width: 1280px) {
+  .navbar {
+    gap: 0.75rem;
+  }
+
+  .nav-menu {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    height: 38px;
+    padding: 0 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .toggle-btn {
+    height: 38px;
+    padding: 0 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-cta {
+    height: 38px;
+    padding: 0 1.15rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-grid {
+    gap: 2.5rem;
+  }
+}
+
+/* 3. Small Laptop & Large Tablet Landscape (992px - 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --navbar-height: 72px;
+  }
+
+  .nav-brand img {
+    height: 40px;
+  }
+
+  .nav-menu {
+    gap: 0.15rem;
+  }
+
+  .nav-link {
+    padding: 0 0.55rem;
+    font-size: 0.86rem;
+  }
+
+  .nav-actions {
+    gap: 0.45rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .process-grid::before {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* 4. Tablet Portrait & Mobile Navigation Trigger (max-width: 991px) */
+@media (max-width: 991px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* Mobile Slide-out Menu */
+  .nav-menu-wrapper {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--navbar-height));
+    background: var(--bg-card);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform var(--transition-normal);
+    box-shadow: var(--shadow-lg);
+    border-top: 1px solid var(--border-color);
+    z-index: 999;
+  }
+
+  .nav-menu-wrapper.active {
+    transform: translateX(0);
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 0.85rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    border: 1px solid transparent;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    border-color: var(--border-color);
+  }
+
+  /* Dropdown inside Mobile Menu */
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none !important;
+    left: auto;
+    box-shadow: none;
+    border: 1px solid var(--border-light);
+    background: var(--bg-surface);
+    margin: 0.35rem 0 0.65rem 1rem;
+    width: calc(100% - 1rem);
+    display: none;
+  }
+
+  .nav-item.dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-cta {
+    display: none; /* In mobile, CTA is inside the slide-out menu */
+  }
+
+  .mobile-cta-item {
+    display: block !important;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .mobile-cta-item .btn {
+    width: 100%;
+  }
+
+  /* Section Spacing */
+  .section {
+    padding: 4.25rem 0;
+  }
+
+  .floating-card-1 {
+    left: 2%;
+  }
+
+  .floating-card-2 {
+    right: 2%;
+  }
+}
+
+/* 5. Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 68px;
+  }
+
+  .nav-brand img {
+    height: 40px;
+  }
+
+  .section {
+    padding: 3.75rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.75rem;
+  }
+
+  .form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .category-tabs {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* 6. Mobile Landscape & Phablet (480px - 576px) */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .hero {
+    padding: 3.5rem 0 4rem 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-card {
+    display: none; /* Hide floating badges on small mobile to avoid layout clutter */
+  }
+
+  .hero-image-wrapper img {
+    height: 340px;
+  }
+
+  .product-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .product-media {
+    height: 200px;
+  }
+}
+
+/* 7. Large Mobile (375px - 414px) */
+@media (max-width: 414px) {
+  .nav-brand img {
+    height: 36px;
+  }
+
+  .toggle-btn {
+    height: 36px;
+    padding: 0 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .theme-toggle {
+    width: 36px;
+  }
+
+  .mobile-toggle {
+    width: 36px;
+    height: 36px;
+    padding: 7px;
+  }
+
+  .section-tag {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.95rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.45rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 1.25rem 1.25rem;
+  }
+}
+
+/* 8. Mobile Standard (360px) */
+@media (max-width: 360px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* 9. Small Mobile (320px) */
+@media (max-width: 320px) {
+  .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .nav-brand img {
+    height: 32px;
+  }
+
+  .navbar {
+    gap: 0.5rem;
+  }
+
+  .toggle-btn {
+    padding: 0 0.5rem;
+    font-size: 0.72rem;
+  }
+
+  .form-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
+

@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Dadi's Swad - Homemade Pickles & Papads Business Template
+   RTL.css - Right-To-Left Support for Arabic, Hebrew & RTL Locales
+   ========================================================================== */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Headings & Text Alignment */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] p {
+  text-align: right;
+}
+
+[dir="rtl"] .text-center {
+  text-align: center;
+}
+
+/* Header & Navbar in RTL */
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+  transform: translateY(10px);
+}
+
+[dir="rtl"] .nav-item.dropdown:hover .dropdown-menu,
+[dir="rtl"] .nav-item.dropdown.open .dropdown-menu {
+  transform: translateY(0);
+}
+
+[dir="rtl"] .dropdown-item:hover,
+[dir="rtl"] .dropdown-item.active {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .dropdown-item i {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .nav-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .dropdown-chevron {
+  margin-right: 0.35rem;
+  margin-left: 0;
+}
+
+/* Floating Badges in Hero */
+[dir="rtl"] .floating-card-1 {
+  left: auto;
+  right: -8%;
+}
+
+[dir="rtl"] .floating-card-2 {
+  right: auto;
+  left: -6%;
+}
+
+/* Product Card Overlays */
+[dir="rtl"] .product-badge-overlay {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .product-spice-indicator {
+  right: auto;
+  left: 12px;
+}
+
+[dir="rtl"] .product-weight i {
+  margin-right: 0;
+  margin-left: 0.35rem;
+}
+
+/* Search Box & Inputs */
+[dir="rtl"] .search-box input {
+  padding: 0 2.85rem 0 1rem;
+}
+
+[dir="rtl"] .search-box i {
+  left: auto;
+  right: 1.15rem;
+}
+
+[dir="rtl"] .input-password-group .form-control {
+  padding-right: 1.15rem;
+  padding-left: 2.85rem;
+}
+
+[dir="rtl"] .password-toggle-btn {
+  right: auto;
+  left: 1rem;
+}
+
+/* Process Steps Numbers */
+[dir="rtl"] .process-step-num {
+  left: auto;
+  right: 12px;
+}
+
+/* Testimonials */
+[dir="rtl"] .testimonial-quote-icon {
+  right: auto;
+  left: 1.75rem;
+}
+
+/* Blog Badges & Links */
+[dir="rtl"] .blog-badge {
+  left: auto;
+  right: 14px;
+}
+
+[dir="rtl"] .blog-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .blog-link:hover {
+  transform: translateX(-4px);
+}
+
+/* Accordion */
+[dir="rtl"] .accordion-header {
+  text-align: right;
+}
+
+/* Toast Container */
+[dir="rtl"] .toast-container {
+  right: auto;
+  left: 2rem;
+}
+
+[dir="rtl"] .toast {
+  border-left: 1px solid var(--border-color);
+  border-right: 5px solid var(--accent);
+  transform: translateX(-100px);
+}
+
+[dir="rtl"] .toast.show {
+  transform: translateX(0);
+}
+
+/* Back to Top Button */
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 2rem;
+}
+
+/* Footer Links & Underlines */
+[dir="rtl"] .footer-widget h4::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-links li a:hover {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .footer-contact-item {
+  flex-direction: row;
+}
+
+/* Mobile Slide-out Menu in RTL */
+@media (max-width: 991px) {
+  [dir="rtl"] .nav-menu-wrapper {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  [dir="rtl"] .nav-menu-wrapper.active {
+    transform: translateX(0);
+  }
+
+  [dir="rtl"] .dropdown-menu {
+    margin: 0.35rem 1rem 0.65rem 0;
+  }
+}
+

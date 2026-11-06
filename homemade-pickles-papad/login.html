@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Customer and Wholesale Partner Login Portal for Dadi's Swad. Access previous pickle orders, order tracking, and invoice statements.">
+  <meta name="author" content="Dadi's Swad">
+  <title>Customer Login | Dadi's Swad - Homemade Pickles &amp; Papads</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Navbar (First element at top) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="nav-brand" aria-label="Dadi's Swad Homepage">
+          <img src="assets/logos/logo.svg" alt="Dadi's Swad Logo" class="logo-light-mode" width="220" height="50">
+          <img src="assets/logos/logo-white.svg" alt="Dadi's Swad Logo" class="logo-dark-mode" width="220" height="50">
+        </a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+          <ul class="nav-menu">
+            <li class="nav-item dropdown">
+              <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" id="homeDropdownLink">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down dropdown-chevron" aria-hidden="true"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdownLink">
+                <li><a href="index.html" class="dropdown-item"><i class="fa-solid fa-house-chimney"></i><span>Home 1 (General Landing)</span></a></li>
+                <li><a href="home-2.html" class="dropdown-item"><i class="fa-solid fa-jar"></i><span>Home 2 (Pickles Niche)</span></a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+            <li class="mobile-cta-item" style="display: none;">
+              <a href="contact.html#order-enquiry" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-cart-shopping"></i> Order Now
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
+            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+            <span>RTL</span>
+          </button>
+
+          <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <a href="contact.html#order-enquiry" class="btn btn-primary nav-cta">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Order Now</span>
+          </a>
+
+          <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login Section -->
+  <main class="section" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 4rem 0;">
+    <div class="container" style="max-width: 480px;">
+      <div class="form-card" style="padding: 2.75rem 2.25rem;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-light); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem auto;">
+            <i class="fa-solid fa-user-lock"></i>
+          </div>
+          <h2 style="font-size: 1.75rem; margin-bottom: 0.35rem;">Welcome Back</h2>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">Log in to access your orders &amp; kitchen account</p>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-alert" role="alert"></div>
+
+          <!-- Email Address -->
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="loginEmail">Email Address <span class="req">*</span></label>
+            <input type="email" id="loginEmail" class="form-control" placeholder="name@example.com" required>
+            <div class="invalid-feedback">A valid email address is required.</div>
+          </div>
+
+          <!-- Password with Show/Hide Toggle -->
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" for="loginPassword">Password <span class="req">*</span></label>
+            <div class="input-password-group">
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter your password" required>
+              <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="invalid-feedback">Password is required.</div>
+          </div>
+
+          <!-- Remember Me & Forgot Password -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.75rem; font-size: 0.88rem;">
+            <label class="form-check">
+              <input type="checkbox" id="rememberMe">
+              <span class="form-check-label">Remember Me</span>
+            </label>
+            <a href="#" onclick="alert('Password reset link sent to demo email.'); return false;" style="color: var(--primary); font-weight: 600;">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-bottom: 1.5rem;">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In to Account
+          </button>
+
+          <div style="text-align: center; font-size: 0.92rem; color: var(--text-muted);">
+            Don't have an account yet? <a href="register.html" style="color: var(--primary); font-weight: 700;">Create Account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2026 Dadi's Swad. Handcrafted with love. All rights reserved.</p>
+        <p><a href="index.html">Back to Home</a> • <a href="contact.html">Need Help?</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/rtl.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
+

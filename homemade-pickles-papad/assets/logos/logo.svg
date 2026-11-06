@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" width="280" height="64" fill="none">
+  <!-- Brand Icon: Ceramic Barni (Pickle Jar) & Sun Motif -->
+  <g transform="translate(4, 4)">
+    <!-- Sunburst circle background -->
+    <circle cx="28" cy="28" r="26" fill="#FDF6EB" stroke="#E39B14" stroke-width="1.5" stroke-dasharray="3 2"/>
+    
+    <!-- Earthen Jar (Martaban) Body -->
+    <!-- Base cream/white glazed ceramic -->
+    <path d="M16 28 C16 46 20 50 28 50 C36 50 40 46 40 28 Z" fill="#F4EBD9" stroke="#9E2A2B" stroke-width="2"/>
+    <!-- Yellow top half glaze (classic Indian barni style) -->
+    <path d="M16 28 C16 22 18 18 28 18 C38 18 40 22 40 28 C40 32 38 34 28 34 C18 34 16 32 16 28 Z" fill="#E39B14" stroke="#9E2A2B" stroke-width="2"/>
+    
+    <!-- Jar neck & traditional cloth tied lid -->
+    <rect x="22" y="14" width="12" height="4" rx="2" fill="#9E2A2B" />
+    <path d="M20 14 Q28 10 36 14 Q32 12 28 12 Q24 12 20 14 Z" fill="#9E2A2B"/>
+    <!-- Hanging cloth twine knot -->
+    <path d="M28 14 L30 18 M28 14 L26 19" stroke="#E39B14" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- Golden spice leaf accent -->
+    <path d="M38 16 C42 12 48 14 46 20 C42 22 39 18 38 16 Z" fill="#2D6A4F"/>
+    <path d="M40 18 Q44 17 45 19" stroke="#E39B14" stroke-width="0.8"/>
+
+    <!-- Small red chilli accent -->
+    <path d="M14 38 Q10 44 14 48 Q16 46 16 40 Z" fill="#9E2A2B"/>
+    <path d="M14 38 Q13 36 12 35" stroke="#2D6A4F" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="68" y="32" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="22" font-weight="800" fill="#9E2A2B" letter-spacing="0.5">Dadi's Swad</text>
+  <text x="68" y="46" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#E39B14" letter-spacing="2.2" text-transform="uppercase">HOMEMADE PICKLES &amp; PAPADS</text>
+  <text x="68" y="56" font-family="'Poppins', 'Segoe UI', sans-serif" font-size="7.5" font-weight="500" fill="#6B5E55" letter-spacing="1">TRADITIONAL RECIPES SINCE 1984</text>
+</svg>
+

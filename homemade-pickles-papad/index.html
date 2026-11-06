@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dadi's Swad - Traditional homemade pickles, crunchy sun-dried papads, and authentic Indian spice blends crafted with pure cold-pressed oils and heritage recipes.">
+  <meta name="keywords" content="homemade pickles, Indian achar, mango pickle, lemon pickle, garlic pickle, handmade papad, appalam, traditional food">
+  <meta name="author" content="Dadi's Swad">
+  <title>Dadi's Swad | Authentic Homemade Pickles &amp; Sun-Dried Papads</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navbar & Header (FIRST ELEMENT AT TOP - NO TOP BANNERS OR NOTIFICATIONS)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Left: Logo -->
+        <a href="index.html" class="nav-brand" aria-label="Dadi's Swad Homepage">
+          <img src="assets/logos/logo.svg" alt="Dadi's Swad Logo" class="logo-light-mode" width="220" height="50">
+          <img src="assets/logos/logo-white.svg" alt="Dadi's Swad Logo" class="logo-dark-mode" width="220" height="50">
+        </a>
+
+        <!-- Middle: Navigation Menu -->
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+          <ul class="nav-menu">
+            <!-- Home with Dropdown -->
+            <li class="nav-item dropdown">
+              <a href="index.html" class="nav-link dropdown-toggle active" aria-haspopup="true" aria-expanded="false" id="homeDropdownLink">
+                <span>Home</span>
+                <i class="fa-solid fa-chevron-down dropdown-chevron" aria-hidden="true"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="homeDropdownLink">
+                <li>
+                  <a href="index.html" class="dropdown-item active">
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <span>Home 1 (General Landing)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="home-2.html" class="dropdown-item">
+                    <i class="fa-solid fa-jar"></i>
+                    <span>Home 2 (Pickles Niche)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+            <!-- Mobile Only CTA inside drawer -->
+            <li class="mobile-cta-item" style="display: none;">
+              <a href="contact.html#order-enquiry" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-cart-shopping"></i> Order Now
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Actions (LTR/RTL, Dark/Light, ONE Primary CTA) -->
+        <div class="nav-actions">
+          <!-- LTR / RTL Toggle -->
+          <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
+            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
+            <span>RTL</span>
+          </button>
+
+          <!-- Dark / Light Theme Toggle -->
+          <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+
+          <!-- ONLY ONE Primary CTA in Navbar -->
+          <a href="contact.html#order-enquiry" class="btn btn-primary nav-cta">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Order Now</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Section 1: Hero Section – Attractive Headline, Homely Food Description
+       ========================================================================== -->
+  <section class="hero" id="homeHero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-mortar-pestle"></i>
+            <span>100% Traditional Stone-Ground Recipes</span>
+          </div>
+          <h1 class="hero-title">Handcrafted <span>Homemade Pickles</span> &amp; Sun-Dried Papads</h1>
+          <p class="hero-desc">
+            Rediscover the soulful warmth of grandmother's kitchen. Hand-cut seasonal produce cured slowly under the golden sun with cold-pressed mustard oil, pure rock salt, and authentic heritage spices. No artificial vinegar, colors, or preservatives.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-jar"></i> Explore Collections
+            </a>
+            <a href="bulk-gifting.html" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-gift"></i> Festive &amp; Bulk Orders
+            </a>
+          </div>
+
+          <div class="hero-features">
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-sun"></i></div>
+              <div class="hero-feature-text">Sun-Cured In<br>Ceramic Barnis</div>
+            </div>
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-seedling"></i></div>
+              <div class="hero-feature-text">Pure Cold-Pressed<br>Oils &amp; Spices</div>
+            </div>
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-shield-heart"></i></div>
+              <div class="hero-feature-text">Zero Chemicals<br>&amp; Preservatives</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/home/hero-home1.jpg" alt="Traditional Indian Pickles, earthen jars, and dried papads" width="520" height="480" loading="eager">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-card floating-card-1">
+            <div class="floating-card-icon icon-jar"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="floating-card-text">
+              <h5>Authentic Flavour</h5>
+              <p>Generations of heritage taste</p>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <div class="floating-card-icon icon-award"><i class="fa-solid fa-star"></i></div>
+            <div class="floating-card-text">
+              <h5>4.9 / 5.0 Rating</h5>
+              <p>Trusted by 12,000+ homes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 2: About Our Business – Introduction & Traditional Heritage
+       ========================================================================== -->
+  <section class="section section-alt" id="aboutBusiness">
+    <div class="container">
+      <div class="hero-grid" style="grid-template-columns: 1fr 1.15fr; align-items: center;">
+        <div class="hero-visual">
+          <div class="hero-image-wrapper" style="border-radius: var(--radius-lg);">
+            <img src="assets/images/home/about-home1.jpg" alt="Traditional homemade preparation of spices and pickle barnis" width="500" height="450" loading="lazy">
+          </div>
+        </div>
+
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-heart"></i> Our Kitchen Story</span>
+          <h2 class="section-title">Rooted in Tradition, Crafted with Mother's Care</h2>
+          <div class="ornament" style="margin: 0.5rem 0 1.5rem 0; justify-content: flex-start;">
+            <i class="fa-solid fa-clover ornament-icon"></i>
+          </div>
+          <p class="section-desc" style="margin-bottom: 1.25rem;">
+            Dadi's Swad was born in a sunlit ancestral courtyard in 1984. What started as grandmother packing hand-rolled urad dal papads and sun-cured raw mango achar in ceramic martabans for visiting grandchildren grew into a cherished household brand.
+          </p>
+          <p class="section-desc" style="margin-bottom: 2rem;">
+            We preserve those sacred, unhurried methods: sun-drying green mango slices on clean muslin sheets, pounding whole spices on stone silbattas, and allowing the natural fermentation to unfold patiently under the golden afternoon sun.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="about.html" class="btn btn-primary">
+              <i class="fa-solid fa-book-open"></i> Read Full Story
+            </a>
+            <a href="services.html" class="btn btn-outline">
+              <i class="fa-solid fa-hands-holding-circle"></i> Custom Flavour Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 3: Our Signature Pickles – Popular Varieties Showcase
+       ========================================================================== -->
+  <section class="section" id="signaturePickles">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-pepper-hot"></i> Handcrafted Treasures</span>
+        <h2 class="section-title">Our Signature Homemade Pickles</h2>
+        <div class="ornament"><i class="fa-solid fa-circle-dot ornament-icon"></i></div>
+        <p class="section-desc">
+          Prepared in micro-batches with cold-pressed oils, hand-pounded spices, and zero chemical preservatives. Every bite brings home comforting nostalgic warmth.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <!-- 1. Mango Pickle -->
+        <div class="product-card" data-category="pickles">
+          <div class="product-media">
+            <span class="product-badge-overlay">
+              <span class="badge badge-primary">Best Seller</span>
+            </span>
+            <div class="product-spice-indicator">
+              <i class="fa-solid fa-pepper-hot"></i> Medium Spicy
+            </div>
+            <img src="assets/images/home/signature-mango.jpg" alt="Traditional Raw Mango Pickle in cold-pressed mustard oil" loading="lazy">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Traditional Pickles</span>
+            <h3 class="product-title"><a href="product-details.html">Traditional Mango Pickle (Aam Ka Achar)</a></h3>
+            <p class="product-desc">Crisp green Ramkela mangoes marinated in cold-pressed mustard oil, fenugreek seeds, and Guntur red chillies.</p>
+            <div class="product-meta">
+              <span class="product-weight"><i class="fa-solid fa-box"></i> 500g Glass Jar</span>
+              <span class="product-price">₹280 <span class="demo-tag">(Demo)</span></span>
+            </div>
+            <div class="product-actions">
+              <a href="product-details.html" class="btn btn-outline btn-sm">View Details</a>
+              <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Traditional Mango Pickle" data-product-price="₹280">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Lemon Pickle -->
+        <div class="product-card" data-category="pickles">
+          <div class="product-media">
+            <span class="product-badge-overlay">
+              <span class="badge badge-secondary">Zero Oil</span>
+            </span>
+            <div class="product-spice-indicator">
+              <i class="fa-solid fa-pepper-hot"></i> Tangy Sweet &amp; Sour
+            </div>
+            <img src="assets/images/home/signature-lemon.jpg" alt="Sun-cured Lemon Pickle in traditional earthen jar" loading="lazy">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Citrus Pickles</span>
+            <h3 class="product-title"><a href="product-details.html">Sun-Cured Lemon Pickle (Nimbu Achar)</a></h3>
+            <p class="product-desc">Thin-skinned Kagzi lemons sun-matured for 40 days with black salt, ajwain, roasted cumin, and hint of organic jaggery.</p>
+            <div class="product-meta">
+              <span class="product-weight"><i class="fa-solid fa-box"></i> 500g Glass Jar</span>
+              <span class="product-price">₹260 <span class="demo-tag">(Demo)</span></span>
+            </div>
+            <div class="product-actions">
+              <a href="product-details.html" class="btn btn-outline btn-sm">View Details</a>
+              <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Sun-Cured Lemon Pickle" data-product-price="₹260">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Garlic Pickle -->
+        <div class="product-card" data-category="pickles">
+          <div class="product-media">
+            <span class="product-badge-overlay">
+              <span class="badge badge-spice">Fiery Rich</span>
+            </span>
+            <div class="product-spice-indicator">
+              <i class="fa-solid fa-pepper-hot"></i> Fiery Spicy
+            </div>
+            <img src="assets/images/home/signature-garlic.jpg" alt="Spicy Garlic Pickle with red chilli and mustard" loading="lazy">
+          </div>
+          <div class="product-content">
+            <span class="product-category">Root &amp; Pod Pickles</span>
+            <h3 class="product-title"><a href="product-details.html">Lahsun Garlic Pod Pickle (Lahsun Achar)</a></h3>
+            <p class="product-desc">Whole peeled desi garlic cloves slow-tempered in unrefined sesame oil, hing, roasted coriander seeds, and Kashmiri mirch.</p>
+            <div class="product-meta">
+              <span class="product-weight"><i class="fa-solid fa-box"></i> 400g Glass Jar</span>
+              <span class="product-price">₹295 <span class="demo-tag">(Demo)</span></span>
+            </div>
+            <div class="product-actions">
+              <a href="product-details.html" class="btn btn-outline btn-sm">View Details</a>
+              <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Lahsun Garlic Pod Pickle" data-product-price="₹295">Enquire Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="products.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-table-cells"></i> View Complete Products Catalog (14+ Varieties)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 4: Why Choose Our Products – Fresh Ingredients, Authenticity & Hygiene
+       ========================================================================== -->
+  <section class="section section-cream" id="whyChooseUs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> The Dadi's Swad Promise</span>
+        <h2 class="section-title">Why Families Trust Our Kitchen</h2>
+        <div class="ornament"><i class="fa-solid fa-shield-halved ornament-icon"></i></div>
+        <p class="section-desc">
+          We never cut corners. Every batch is treated like food prepared for our own children and grandchildren.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-leaf"></i></div>
+          <h3 class="feature-title">Pure Farm Ingredients</h3>
+          <p class="feature-desc">Naturally grown raw mangoes, Salem turmeric, Guntur chillies, and rock salt sourced directly from certified organic farmers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-sun"></i></div>
+          <h3 class="feature-title">Solar Cured &amp; Clay Aged</h3>
+          <p class="feature-desc">Aged unhurriedly under the sun in authentic ceramic barnis to develop natural beneficial probiotic cultures and deep flavour.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-ban"></i></div>
+          <h3 class="feature-title">Zero Artificial Additives</h3>
+          <p class="feature-desc">No synthetic acetic acid, artificial red dyes, sodium benzoate, or chemical stabilizers. 100% natural shelf-life through oil curing.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-hand-sparkles"></i></div>
+          <h3 class="feature-title">Hygienic Small Batches</h3>
+          <p class="feature-desc">Prepared in an FSSAI-compliant clean kitchen under strict sanitation protocols, packed into sterilized airtight glass jars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 5: Our Preparation Process – Step-by-Step Homemade Methods
+       ========================================================================== -->
+  <section class="section" id="prepProcess">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-kitchen-set"></i> Art of Preservation</span>
+        <h2 class="section-title">Our Traditional Preparation Process</h2>
+        <div class="ornament"><i class="fa-solid fa-fire ornament-icon"></i></div>
+        <p class="section-desc">
+          Four sacred steps passed down across generations that give our pickles and papads their unmistakable homely crunch and zest.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-card">
+          <div class="process-media">
+            <span class="process-step-num">1</span>
+            <img src="assets/images/home/process-sourcing.jpg" alt="Farm fresh raw mangoes and organic spices selection" loading="lazy">
+          </div>
+          <div class="process-info">
+            <h3 class="process-title">Careful Farm Sourcing</h3>
+            <p class="process-desc">Only hand-inspected, firm raw mangoes, unblemished lemons, and heirloom garlic cloves enter our washing sinks.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card">
+          <div class="process-media">
+            <span class="process-step-num">2</span>
+            <img src="assets/images/home/process-drying.jpg" alt="Sun drying vegetable slices on clean terrace sheets" loading="lazy">
+          </div>
+          <div class="process-info">
+            <h3 class="process-title">Natural Sun-Drying</h3>
+            <p class="process-desc">Diced produce is salted with crushed rock salt and sun-dried on terrace muslin sheets to eliminate all moisture naturally.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card">
+          <div class="process-media">
+            <span class="process-step-num">3</span>
+            <img src="assets/images/home/process-spices.jpg" alt="Stone pounding traditional Indian whole spices" loading="lazy">
+          </div>
+          <div class="process-info">
+            <h3 class="process-title">Stone-Ground Spicing</h3>
+            <p class="process-desc">Mustard, fenugreek, fennel, and hing are gently dry-roasted on cast iron tawas and coarse-ground on traditional stone mills.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-card">
+          <div class="process-media">
+            <span class="process-step-num">4</span>
+            <img src="assets/images/home/process-curing.jpg" alt="Sun curing in traditional ceramic barnis with pure mustard oil" loading="lazy">
+          </div>
+          <div class="process-info">
+            <h3 class="process-title">Barní Aging &amp; Packing</h3>
+            <p class="process-desc">Submerged in cold-pressed oil inside porcelain barnis for 21 to 40 days, stirred daily with neem wood paddles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 6: Customer Testimonials – Authentic Reviews & Feedback
+       ========================================================================== -->
+  <section class="section section-alt" id="customerTestimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-comments"></i> Real Stories</span>
+        <h2 class="section-title">Loved by Homes Across India &amp; Abroad</h2>
+        <div class="ornament"><i class="fa-solid fa-heart ornament-icon"></i></div>
+        <p class="section-desc">
+          Heartfelt reviews from food lovers who found the exact flavour of their mother's and grandmother's kitchen in our jars.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "I have been living away from home in Bangalore for 8 years. The first spoonful of Dadi's Swad Mango Pickle literally brought tears of joy. The oil, the pungency of mustard, and the firmness of the mango piece is identical to my grandmother's recipe!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="assets/images/home/customer-1.jpg" alt="Customer Ananya Sharma" loading="lazy">
+            </div>
+            <div class="author-info">
+              <h5>Ananya Sharma</h5>
+              <p>Bangalore, Karnataka</p>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The Urad Dal and Masala Papads are an absolute revelation! No baking soda taste, no chemical aftertaste—just pure, crisp crunch with genuine black pepper and cumin. We ordered 100 packs for my daughter's wedding hampers."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="assets/images/home/customer-2.jpg" alt="Customer Rajesh Mehrotra" loading="lazy">
+            </div>
+            <div class="author-info">
+              <h5>Rajesh Mehrotra</h5>
+              <p>Jaipur, Rajasthan</p>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Bulk Order Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div class="rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "The Garlic Pod pickle and Sun-cured Lemon are top tier. You can clearly feel the cold-pressed mustard oil quality. Even my 78-year-old mother-in-law gave her full stamp of approval! Will be subscribing every month."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">
+              <img src="assets/images/home/customer-3.jpg" alt="Customer Meenakshi Iyer" loading="lazy">
+            </div>
+            <div class="author-info">
+              <h5>Meenakshi Iyer</h5>
+              <p>Chennai, Tamil Nadu</p>
+              <span class="verified-badge"><i class="fa-solid fa-circle-check"></i> Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Section 7: Order Enquiry Section – Quick Interactive Order Form
+       ========================================================================== -->
+  <section class="section" id="orderEnquiry">
+    <div class="container">
+      <div class="hero-grid" style="grid-template-columns: 1fr 1.25fr; align-items: center; gap: 3rem;">
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-truck-fast"></i> Fresh From Our Kitchen</span>
+          <h2 class="section-title">Order Your Fresh Homemade Jars Today</h2>
+          <div class="ornament" style="margin: 0.5rem 0 1.5rem 0; justify-content: flex-start;">
+            <i class="fa-solid fa-basket-shopping ornament-icon"></i>
+          </div>
+          <p class="section-desc" style="margin-bottom: 1.5rem;">
+            Fill in your details to enquire about retail jars, customized spice levels, festive hampers, or wholesale pricing. We deliver safely packed jars across all pin codes in India.
+          </p>
+          <div class="hero-image-wrapper" style="border-radius: var(--radius-lg); max-width: 420px; box-shadow: var(--shadow-md);">
+            <img src="assets/images/home/order-cta.jpg" alt="Artisan pickle jars packaged on dining table" width="420" height="280" loading="lazy">
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Quick Order Enquiry</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.75rem;">
+            Please fill out the form below. We will confirm availability and delivery dispatch within 2 business hours.
+          </p>
+
+          <form id="quickEnquiryForm" novalidate>
+            <div class="form-alert" role="alert"></div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="quickName">Your Name <span class="req">*</span></label>
+                <input type="text" id="quickName" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quickPhone">Phone / WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="quickPhone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+                <div class="invalid-feedback">Please enter a valid contact number.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quickProduct">Select Product Category <span class="req">*</span></label>
+                <select id="quickProduct" class="form-select" required>
+                  <option value="" disabled selected>Choose a category...</option>
+                  <option value="Mango Pickle (Avakaya)">Mango Pickle (Avakaya)</option>
+                  <option value="Sun-Cured Lemon Pickle">Sun-Cured Lemon Pickle</option>
+                  <option value="Garlic Pod Pickle">Garlic Pod Pickle</option>
+                  <option value="Mixed Vegetable Pickle">Mixed Vegetable Pickle</option>
+                  <option value="Gooseberry (Amla) Pickle">Gooseberry (Amla) Pickle</option>
+                  <option value="Tomato Thokku Pickle">Tomato Thokku Pickle</option>
+                  <option value="Traditional Rice Papad">Traditional Rice Papad</option>
+                  <option value="Masala Papad & Appalam">Masala Papad &amp; Appalam</option>
+                  <option value="Assorted Gift Box Collection">Assorted Gift Box Collection</option>
+                </select>
+                <div class="invalid-feedback">Please choose a product category.</div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quickQuantity">Required Quantity <span class="req">*</span></label>
+                <select id="quickQuantity" class="form-select" required>
+                  <option value="1 Jar (500g)">1 Jar (500g)</option>
+                  <option value="2 Jars (1kg Combo)">2 Jars (1kg Combo)</option>
+                  <option value="Family Pack (3x 500g)">Family Pack (3x 500g)</option>
+                  <option value="Bulk Order (5kg - 25kg)">Bulk Order (5kg - 25kg)</option>
+                  <option value="Catering / Wholesale (25kg+)">Catering / Wholesale (25kg+)</option>
+                </select>
+                <div class="invalid-feedback">Please choose quantity.</div>
+              </div>
+
+              <div class="form-group form-full">
+                <label class="form-label" for="quickMessage">Delivery City / Special Instructions</label>
+                <textarea id="quickMessage" class="form-textarea" placeholder="Mention your delivery pin code or any low-salt / extra-spice preferences..."></textarea>
+              </div>
+
+              <div class="form-full">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                  <i class="fa-solid fa-paper-plane"></i> Submit Order Enquiry
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Quick Product Enquiry Modal (Reusable)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="productEnquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--secondary); font-weight: 700;">Express Order Enquiry</span>
+          <h3 class="modal-title" id="modalProductName">Selected Product</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modalEnquiryForm" novalidate>
+          <input type="hidden" id="enquiryProductField" name="productName" value="">
+          <div class="form-alert" role="alert"></div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="modalCustName">Your Full Name <span class="req">*</span></label>
+            <input type="text" id="modalCustName" class="form-control" placeholder="Enter your full name" required>
+            <div class="invalid-feedback">Name is required.</div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="modalCustPhone">WhatsApp / Mobile Number <span class="req">*</span></label>
+            <input type="tel" id="modalCustPhone" class="form-control" placeholder="+91 98765 43210" required>
+            <div class="invalid-feedback">Valid phone number required.</div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="modalPackSize">Preferred Pack Size</label>
+            <select id="modalPackSize" class="form-select">
+              <option value="250g Jar">250g Jar</option>
+              <option value="500g Jar" selected>500g Jar (Most Popular)</option>
+              <option value="1kg Family Tub">1kg Family Tub</option>
+              <option value="5kg Bulk Bucket">5kg Bulk Bucket</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" for="modalCity">Delivery Pincode / Address</label>
+            <input type="text" id="modalCity" class="form-control" placeholder="e.g. Mumbai, 400001">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-check"></i> Confirm Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" aria-live="polite"></div>
+
+  <!-- Back to Top Button -->
+  <button type="button" class="back-to-top" aria-label="Scroll to top of page">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Widget 1: Brand Story -->
+        <div class="footer-widget">
+          <div class="footer-brand">
+            <img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50">
+          </div>
+          <p class="footer-about-text">
+            Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://whatsapp.com" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://youtube.com" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Widget 2: Quick Links -->
+        <div class="footer-widget">
+          <h4>Explore Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1 (General)</a></li>
+            <li><a href="home-2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Pickles Niche)</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Our Kitchen</a></li>
+            <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Pickle &amp; Papad Catalog</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Homemade Services</a></li>
+            <li><a href="bulk-gifting.html"><i class="fa-solid fa-chevron-right"></i> Bulk &amp; Gift Boxes</a></li>
+            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Transparent Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Widget 3: Categories & Admin -->
+        <div class="footer-widget">
+          <h4>Products &amp; More</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?cat=pickles"><i class="fa-solid fa-jar"></i> Mango &amp; Lemon Pickles</a></li>
+            <li><a href="products.html?cat=papads"><i class="fa-solid fa-cookie"></i> Hand-Rolled Papads</a></li>
+            <li><a href="product-details.html"><i class="fa-solid fa-circle-info"></i> Product Details Page</a></li>
+            <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
+            <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
+            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
+          </ul>
+        </div>
+
+        <!-- Widget 4: Contact & FSSAI -->
+        <div class="footer-widget">
+          <h4>Direct Kitchen Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>18, Heritage Courtyard, Gandhi Road, Varanasi, Uttar Pradesh 221001, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:swad@dadisswad.com">swad@dadisswad.com</a>
+            </div>
+          </div>
+
+          <div class="footer-fssai-box">
+            <i class="fa-solid fa-shield-halved" style="color: var(--secondary); font-size: 1.5rem;"></i>
+            <div class="fssai-text">
+              <h6>FSSAI License Certified</h6>
+              <p>Lic. No: 10022051000184 (Pure Hygiene)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dadi's Swad. Handcrafted with love. All rights reserved.</p>
+        <p>Premium Multipurpose HTML5 Template | Designed for ThemeForest &amp; TemplateMonster</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/rtl.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
+

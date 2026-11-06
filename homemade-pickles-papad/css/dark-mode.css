@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Dadi's Swad - Homemade Pickles & Papads Business Template
+   Dark-Mode.css - Seamless, High-Contrast Dark Theme
+   ========================================================================== */
+
+[data-theme="dark"] {
+  /* Dark Theme Palette */
+  --bg-main: #14100E;           /* Deep Warm Espresso Charcoal */
+  --bg-surface: #1C1613;        /* Dark Sandstone Surface */
+  --bg-card: #251E1A;           /* Elevated Dark Card */
+  --bg-alt: #191411;
+
+  --text-main: #FBF6F0;         /* Warm Off-White / Cream */
+  --text-body: #D8CCC2;         /* High readability light body */
+  --text-muted: #9E8E82;        /* Soft secondary text */
+  --text-light: #706257;
+
+  --border-color: #382C25;
+  --border-light: #2D231D;
+  --border-dark: #4A3B32;
+
+  --primary: #C93B3D;           /* Brighter Crimson for dark contrast */
+  --primary-hover: #E04B4D;
+  --primary-light: rgba(201, 59, 61, 0.16);
+
+  --secondary: #F59E0B;         /* Bright Amber/Mustard */
+  --secondary-hover: #D97706;
+  --secondary-light: rgba(245, 158, 11, 0.16);
+
+  --accent: #34D399;            /* Bright Mint/Emerald */
+  --accent-light: rgba(52, 211, 153, 0.15);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-hover: 0 20px 48px rgba(201, 59, 61, 0.25);
+}
+
+/* Logo Switching */
+[data-theme="dark"] .logo-light-mode {
+  display: none !important;
+}
+
+[data-theme="dark"] .logo-dark-mode {
+  display: block !important;
+}
+
+/* Header & Navigation in Dark Mode */
+[data-theme="dark"] .site-header {
+  background: rgba(20, 16, 14, 0.95);
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .site-header.scrolled {
+  background: rgba(20, 16, 14, 0.98);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .nav-link {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item.active {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+[data-theme="dark"] .toggle-btn {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .toggle-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Mobile Drawer in Dark Mode */
+[data-theme="dark"] .nav-menu-wrapper {
+  background: var(--bg-main);
+  border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .mobile-toggle {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .mobile-toggle span {
+  background-color: var(--text-main);
+}
+
+/* Hero Section Dark Mode */
+[data-theme="dark"] .hero {
+  background: radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.08), transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(201, 59, 61, 0.1), transparent 50%),
+              var(--bg-main);
+}
+
+[data-theme="dark"] .hero-image-wrapper {
+  border-color: var(--bg-card);
+}
+
+[data-theme="dark"] .floating-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .page-hero {
+  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-main) 100%);
+  border-bottom-color: var(--border-color);
+}
+
+/* Product Cards Dark Mode */
+[data-theme="dark"] .product-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-spice-indicator {
+  background: rgba(37, 30, 26, 0.95);
+}
+
+[data-theme="dark"] .filter-toolbar {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .search-box input {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .search-box input:focus {
+  background: var(--bg-card);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .tab-btn {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-body);
+}
+
+/* Features, Process & Testimonials Dark Mode */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .process-card,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .pricing-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .testimonial-quote-icon {
+  color: var(--border-color);
+}
+
+/* Forms & Inputs Dark Mode */
+[data-theme="dark"] .form-card {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] .form-textarea:focus {
+  background: var(--bg-card);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .is-invalid .form-control,
+[data-theme="dark"] .is-invalid .form-select,
+[data-theme="dark"] .is-invalid .form-textarea {
+  background: rgba(239, 68, 68, 0.15) !important;
+}
+
+/* Accordion Dark Mode */
+[data-theme="dark"] .accordion-item {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-header {
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .accordion-header:hover {
+  background: var(--bg-surface);
+}
+
+[data-theme="dark"] .accordion-body {
+  background: var(--bg-card);
+}
+
+/* Modals & Toasts Dark Mode */
+[data-theme="dark"] .modal-dialog {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-header {
+  border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-close {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .toast {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+/* Footer in Dark Mode */
+[data-theme="dark"] .site-footer {
+  background: #0D0A09;
+  border-top: 1px solid var(--border-color);
+}
+

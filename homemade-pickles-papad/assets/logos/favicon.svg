@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#9E2A2B"/>
+  <circle cx="32" cy="32" r="28" fill="#FDF6EB" stroke="#E39B14" stroke-width="2"/>
+  <!-- Traditional Barni Pickle Jar -->
+  <path d="M20 32 C20 48 24 52 32 52 C40 52 44 48 44 32 Z" fill="#F4EBD9" stroke="#9E2A2B" stroke-width="2"/>
+  <path d="M20 32 C20 25 22 21 32 21 C42 21 44 25 44 32 C44 36 41 38 32 38 C23 38 20 36 20 32 Z" fill="#E39B14" stroke="#9E2A2B" stroke-width="2"/>
+  <rect x="26" y="16" width="12" height="5" rx="2" fill="#9E2A2B" />
+  <path d="M24 16 Q32 12 40 16 Q36 14 32 14 Q28 14 24 16 Z" fill="#9E2A2B"/>
+  <path d="M32 16 L35 21 M32 16 L29 22" stroke="#E39B14" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
+
