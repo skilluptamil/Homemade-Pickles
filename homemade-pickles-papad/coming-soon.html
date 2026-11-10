@@ -18,7 +18,7 @@
   <!-- Navbar Minimal for Coming Soon (First element at top) -->
   <header class="site-header" id="siteHeader">
     <div class="container">
-      <nav class="navbar" style="justify-content: space-between;">
+      <nav class="navbar navbar-minimal" style="justify-content: space-between;">
         <a href="index.html" class="nav-brand" aria-label="Dadi's Swad Homepage">
           <img src="assets/logos/logo.svg" alt="Dadi's Swad Logo" class="logo-light-mode" width="220" height="50">
           <img src="assets/logos/logo-white.svg" alt="Dadi's Swad Logo" class="logo-dark-mode" width="220" height="50">
@@ -26,10 +26,10 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat"></i> <span>RTL</span>
+            <span>RTL</span>
           </button>
           <button type="button" class="toggle-btn theme-toggle" aria-label="Toggle Dark/Light Mode">
-            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
           </button>
           <a href="contact.html" class="btn btn-outline nav-cta">
             <i class="fa-solid fa-phone"></i> Contact Desk
@@ -43,7 +43,7 @@
   <main class="section" style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4rem 0;">
     <div class="container" style="max-width: 760px;">
       <span class="section-tag"><i class="fa-solid fa-fire-burner"></i> In The Earthen Pot</span>
-      <h1 style="font-size: clamp(2.4rem, 4.5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.25rem;">
+      <h1 style="font-size: clamp(2.1rem, 4.5vw, 3.8rem); line-height: 1.15; margin-bottom: 1.25rem;">
         Something Delicious is <span style="color: var(--primary);">Simmering!</span>
       </h1>
       <p style="font-size: 1.15rem; color: var(--text-body); line-height: 1.8; margin-bottom: 2.75rem;">
@@ -51,37 +51,37 @@
       </p>
 
       <!-- Functional Vanilla JS Countdown Timer -->
-      <div id="comingSoonTimer" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 3rem; flex-wrap: wrap;">
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; min-width: 110px; box-shadow: var(--shadow-sm);">
-          <span id="timerDays" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--primary); display: block; line-height: 1;">30</span>
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Days</span>
+      <div id="comingSoonTimer" class="countdown-grid">
+        <div class="countdown-box">
+          <span id="timerDays" class="countdown-value" style="color: var(--primary);">30</span>
+          <span class="countdown-label">Days</span>
         </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; min-width: 110px; box-shadow: var(--shadow-sm);">
-          <span id="timerHours" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--secondary); display: block; line-height: 1;">12</span>
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Hours</span>
+        <div class="countdown-box">
+          <span id="timerHours" class="countdown-value" style="color: var(--secondary);">12</span>
+          <span class="countdown-label">Hours</span>
         </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; min-width: 110px; box-shadow: var(--shadow-sm);">
-          <span id="timerMinutes" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--accent); display: block; line-height: 1;">45</span>
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Minutes</span>
+        <div class="countdown-box">
+          <span id="timerMinutes" class="countdown-value" style="color: var(--accent);">45</span>
+          <span class="countdown-label">Minutes</span>
         </div>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem 1.75rem; min-width: 110px; box-shadow: var(--shadow-sm);">
-          <span id="timerSeconds" style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--spice-red); display: block; line-height: 1;">00</span>
-          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Seconds</span>
+        <div class="countdown-box">
+          <span id="timerSeconds" class="countdown-value" style="color: var(--spice-red);">00</span>
+          <span class="countdown-label">Seconds</span>
         </div>
       </div>
 
       <!-- Email Notification Form -->
-      <div style="background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-xl); border: 1px solid var(--border-color); box-shadow: var(--shadow-md); margin-bottom: 2.5rem;">
+      <div class="newsletter-card" style="margin-bottom: 2.5rem;">
         <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Be the First to Taste</h3>
         <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.5rem;">
           Enter your email below to receive an early-bird tasting code with 20% off on your first order.
         </p>
 
         <form id="newsletterForm" style="display: flex; gap: 0.75rem; max-width: 480px; margin: 0 auto; flex-wrap: wrap;">
-          <input type="email" class="form-control" placeholder="Enter your email address..." required style="flex: 1; min-width: 240px; border-radius: var(--radius-full);">
+          <input type="email" class="form-control newsletter-input" placeholder="Enter your email address..." required>
           <button type="submit" class="btn btn-primary" style="padding: 0 1.75rem;">
             <i class="fa-solid fa-bell"></i> Notify Me
           </button>

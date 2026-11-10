@@ -56,7 +56,6 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -117,7 +116,7 @@
         </p>
       </div>
 
-      <div class="dash-card">
+      <div class="info-card">
         <div class="table-responsive">
           <table class="table-custom">
             <thead>
@@ -208,7 +207,7 @@
         </p>
       </div>
 
-      <div class="dash-card">
+      <div class="info-card">
         <div class="table-responsive">
           <table class="table-custom">
             <thead>
@@ -288,33 +287,33 @@
         <div class="ornament"><i class="fa-solid fa-weight-scale ornament-icon"></i></div>
       </div>
 
-      <div class="features-grid">
+      <div class="sizes-grid">
         <div class="feature-card">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-jar"></i></div>
           <h3 class="feature-title">250g Sampler</h3>
           <p class="feature-desc">Average ₹160 / jar. Best for single person households or sampling diverse flavours.</p>
-          <span style="font-weight: 800; color: var(--text-muted); font-size: 0.85rem;">₹640 / kg equivalent</span>
+          <span class="size-highlight" style="color: var(--text-muted);">₹640 / kg equivalent</span>
         </div>
 
         <div class="feature-card" style="border: 2px solid var(--primary);">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-jar-wheat"></i></div>
           <h3 class="feature-title">500g Everyday Family</h3>
           <p class="feature-desc">Average ₹280 / jar. Our best balance of freshness and price economy.</p>
-          <span style="font-weight: 800; color: var(--primary); font-size: 0.85rem;">Save 12% vs Sampler</span>
+          <span class="size-highlight" style="color: var(--primary);">Save 12% vs Sampler</span>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-bucket"></i></div>
           <h3 class="feature-title">1kg Family Canister</h3>
           <p class="feature-desc">Average ₹520 / tub. Excellent for large joint families and avid pickle lovers.</p>
-          <span style="font-weight: 800; color: var(--accent); font-size: 0.85rem;">Save 19% vs Sampler</span>
+          <span class="size-highlight" style="color: var(--accent);">Save 19% vs Sampler</span>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-box-open"></i></div>
           <h3 class="feature-title">5kg Catering Bucket</h3>
           <p class="feature-desc">Average ₹2,250 / bucket. Food-grade pail tailored for cafes and dining halls.</p>
-          <span style="font-weight: 800; color: var(--secondary); font-size: 0.85rem;">Save 30% Bulk Discount</span>
+          <span class="size-highlight" style="color: var(--secondary-hover);">Save 30% Bulk Discount</span>
         </div>
       </div>
     </div>
@@ -334,7 +333,7 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <div class="pricing-grid">
         <!-- Tier 1 -->
         <div class="pricing-card">
           <div class="pricing-header">
@@ -393,18 +392,18 @@
        ========================================================================== -->
   <section class="section" id="customQuoteSection">
     <div class="container">
-      <div style="background: linear-gradient(135deg, var(--bg-surface), var(--bg-alt)); border-radius: var(--radius-xl); padding: 3.5rem 3rem; border: 1px solid var(--border-color); display: grid; grid-template-columns: 1.25fr 1fr; gap: 3rem; align-items: center;">
+      <div class="banner-split" style="background: linear-gradient(135deg, var(--bg-surface), var(--bg-alt));">
         <div>
           <span class="section-tag"><i class="fa-solid fa-hand-holding-dollar"></i> Tailored Quotations</span>
-          <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Need an Enterprise Custom Quote?</h2>
+          <h2 style="font-size: 2.15rem; margin-bottom: 1rem;">Need an Enterprise Custom Quote?</h2>
           <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;">
             Whether you require 2,500 Diwali gift hampers or recurring weekly shipments of 100kg garlic achar to a restaurant chain in Mumbai, we create customized agreements with guaranteed price stability across seasonal harvest fluctuations.
           </p>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="bulk-gifting.html" class="btn btn-primary btn-lg">
+          <div class="quote-cta-actions">
+            <a href="bulk-gifting.html" class="btn btn-primary">
               <i class="fa-solid fa-file-signature"></i> Request Custom Agreement
             </a>
-            <a href="contact.html" class="btn btn-outline btn-lg">
+            <a href="contact.html" class="btn btn-outline">
               <i class="fa-solid fa-phone"></i> Call Our Commercial Desk
             </a>
           </div>
@@ -544,7 +543,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-widget">
-          <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          <div class="footer-brand"><a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></a></div>
           <p class="footer-about-text">Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.</p>
           <div class="social-links">
             <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -576,7 +575,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 

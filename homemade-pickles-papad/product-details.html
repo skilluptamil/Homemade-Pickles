@@ -56,7 +56,6 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -101,16 +100,16 @@
        ========================================================================== -->
   <section class="section" id="productOverview">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 4rem; align-items: start;">
+      <div class="split-grid-wide-right" style="align-items: start;">
         <!-- Left: Image Gallery with Interactive Thumbnails -->
         <div>
-          <div style="position: relative; width: 100%; height: 420px; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); margin-bottom: 1.25rem;">
-            <img src="assets/images/products/product-detail-main.jpg" id="mainProductImage" alt="Traditional Mango Pickle in Glass Jar" style="width: 100%; height: 100%; object-fit: cover; transition: all var(--transition-normal);" loading="eager">
+          <div class="product-main-media">
+            <img src="assets/images/products/product-detail-main.jpg" id="mainProductImage" alt="Traditional Mango Pickle in Glass Jar" loading="eager">
             <span class="badge badge-primary" style="position: absolute; top: 16px; left: 16px;">Authentic Recipe</span>
           </div>
 
           <!-- Thumbnails -->
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+          <div class="product-thumb-grid">
             <div class="gallery-thumb active" data-full-img="assets/images/products/product-detail-angle1.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid var(--primary); cursor: pointer;">
               <img src="assets/images/products/product-detail-angle1.jpg" alt="Artisanal Mango Pickle Angle" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
@@ -146,7 +145,7 @@
           </p>
 
           <!-- Specifications Matrix -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem; padding: 1.25rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <div class="mini-grid-2" style="margin-bottom: 2rem; padding: 1.25rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Spice Level</span>
               <p style="font-size: 0.95rem; font-weight: 700; color: var(--spice-red); margin-bottom: 0;">
@@ -223,57 +222,57 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h4 class="dash-card-title"><i class="fa-solid fa-carrot" style="color: var(--primary);"></i> Raw Ingredients List</h4>
+      <div class="split-grid" style="gap: 3rem; align-items: stretch;">
+        <div class="info-card">
+          <div class="info-card-header">
+            <h4 class="info-card-title"><i class="fa-solid fa-carrot" style="color: var(--primary);"></i> Raw Ingredients List</h4>
           </div>
-          <div class="dash-card-body">
+          <div class="info-card-body">
             <ul style="display: flex; flex-direction: column; gap: 0.85rem;">
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Hand-Cut Green Mangoes</strong> <span>62%</span>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Cold-Pressed Mustard Oil (Kachi Ghani)</strong> <span>18%</span>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Natural Rock Salt (Sendha Namak)</strong> <span>11%</span>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Split Yellow &amp; Black Mustard Seeds</strong> <span>3.5%</span>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Guntur Sun-Dried Red Chilli Powder</strong> <span>3%</span>
               </li>
-              <li style="display: flex; justify-content: space-between;">
+              <li style="display: flex; justify-content: space-between; gap: 1rem;">
                 <strong>Fenugreek (Methi), Turmeric &amp; Hing</strong> <span>2.5%</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="dash-card">
-          <div class="dash-card-header">
-            <h4 class="dash-card-title"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> Nutritional Values (per 100g)</h4>
+        <div class="info-card">
+          <div class="info-card-header">
+            <h4 class="info-card-title"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> Nutritional Values (per 100g)</h4>
           </div>
-          <div class="dash-card-body">
+          <div class="info-card-body">
             <ul style="display: flex; flex-direction: column; gap: 0.85rem;">
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Energy</span> <strong>194 kcal</strong>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Dietary Fiber</span> <strong>4.2 g</strong>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Good Fats (MUFA/PUFA from Mustard Oil)</span> <strong>16.8 g</strong>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Carbohydrates</span> <strong>7.5 g</strong>
               </li>
-              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem;">
+              <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Vitamin C</span> <strong>28 mg</strong>
               </li>
-              <li style="display: flex; justify-content: space-between;">
+              <li style="display: flex; justify-content: space-between; gap: 1rem;">
                 <span>Added Synthetic Chemicals</span> <strong style="color: var(--accent);">0.0% (None)</strong>
               </li>
             </ul>
@@ -485,7 +484,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-widget">
-          <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          <div class="footer-brand"><a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></a></div>
           <p class="footer-about-text">Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.</p>
           <div class="social-links">
             <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -517,7 +516,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 

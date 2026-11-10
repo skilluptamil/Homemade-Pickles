@@ -48,6 +48,10 @@
     font-size: 0.85rem;
   }
 
+  .sizes-grid {
+    gap: 1.25rem;
+  }
+
   .footer-grid {
     gap: 2.5rem;
   }
@@ -104,6 +108,33 @@
     display: none;
   }
 
+  .sizes-grid,
+  .team-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .sizes-grid .feature-title {
+    min-height: auto;
+  }
+
+  .process-grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .popular-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-detail-layout {
+    grid-template-columns: 1.65fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .pricing-grid {
+    gap: 1.5rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
@@ -139,7 +170,9 @@
     padding: 2rem 1.5rem;
     overflow-y: auto;
     transform: translateX(-100%);
-    transition: transform var(--transition-normal);
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform var(--transition-normal), visibility var(--transition-normal);
     box-shadow: var(--shadow-lg);
     border-top: 1px solid var(--border-color);
     z-index: 999;
@@ -147,6 +180,8 @@
 
   .nav-menu-wrapper.active {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-menu {
@@ -203,6 +238,13 @@
     display: none; /* In mobile, CTA is inside the slide-out menu */
   }
 
+  .navbar-minimal .nav-cta {
+    display: inline-flex;
+    height: 38px;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+  }
+
   .mobile-cta-item {
     display: block !important;
     margin-top: 1.5rem;
@@ -211,6 +253,59 @@
 
   .mobile-cta-item .btn {
     width: 100%;
+  }
+
+  /* Collapse Multi-Column Section Grids Cleanly */
+  .split-grid,
+  .split-grid-start,
+  .split-grid-wide-left,
+  .split-grid-wide-right,
+  .banner-split,
+  .featured-article-card,
+  .blog-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .process-grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular-tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-article-media {
+    min-height: 280px;
+  }
+
+  .featured-article-body {
+    padding: 2.25rem 1.75rem;
+  }
+
+  .banner-split {
+    padding: 2.25rem 1.75rem;
+    gap: 1.75rem;
+  }
+
+  .product-main-media {
+    height: 340px;
+  }
+
+  .blog-hero-media {
+    height: 320px;
+  }
+
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 42px;
+    height: 42px;
   }
 
   /* Section Spacing */
@@ -242,11 +337,19 @@
   }
 
   .section-header {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.5rem;
   }
 
   .form-card {
     padding: 2rem 1.5rem;
+  }
+
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .newsletter-card {
+    padding: 2.25rem 1.5rem;
   }
 
   .form-grid {
@@ -255,8 +358,14 @@
   }
 
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
     gap: 1.5rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .filter-toolbar {
@@ -266,6 +375,11 @@
     gap: 1rem;
   }
 
+  .search-box {
+    min-width: 0;
+    width: 100%;
+  }
+
   .category-tabs {
     overflow-x: auto;
     padding-bottom: 0.5rem;
@@ -273,13 +387,27 @@
     justify-content: flex-start;
   }
 
-  .testimonials-grid {
+  .testimonials-grid,
+  .blog-grid {
     grid-template-columns: 1fr;
+  }
+
+  .toast-container {
+    right: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    align-items: stretch;
+  }
+
+  .toast {
+    min-width: 0;
+    width: 100%;
+    max-width: none;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.25rem;
   }
 
   .footer-bottom {
@@ -287,25 +415,17 @@
     text-align: center;
     gap: 1rem;
   }
-
-  .pricing-card.featured {
-    transform: none;
-  }
-
-  .pricing-card.featured:hover {
-    transform: translateY(-6px);
-  }
 }
 
 /* 6. Mobile Landscape & Phablet (480px - 576px) */
 @media (max-width: 576px) {
   .container {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
   }
 
   .hero {
-    padding: 3.5rem 0 4rem 0;
+    padding: 3.25rem 0 3.75rem 0;
   }
 
   .hero-actions {
@@ -323,8 +443,39 @@
     gap: 1rem;
   }
 
-  .process-grid {
+  .process-grid,
+  .sizes-grid,
+  .team-grid-4,
+  .process-grid-5,
+  .mini-grid-2,
+  .stats-mini-grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .quote-cta-actions .btn {
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .banner-split {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .featured-article-body {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .featured-article-media {
+    min-height: 220px;
+  }
+
+  .blog-hero-media {
+    height: 240px;
+  }
+
+  .product-main-media {
+    height: 280px;
   }
 
   .floating-card {
@@ -332,7 +483,7 @@
   }
 
   .hero-image-wrapper img {
-    height: 340px;
+    height: 320px;
   }
 
   .product-actions {
@@ -340,14 +491,50 @@
   }
 
   .product-media {
-    height: 200px;
+    height: 210px;
+  }
+
+  .map-wrapper {
+    height: 260px;
+  }
+
+  .countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .countdown-box {
+    min-width: 0;
+    padding: 1.15rem 1rem;
+  }
+
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  .product-thumb-grid {
+    gap: 0.6rem;
   }
 }
 
-/* 7. Large Mobile (375px - 414px) */
-@media (max-width: 414px) {
+/* 7. Large Mobile & Standard Small Devices (360px - 425px) */
+@media (max-width: 425px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .nav-brand img {
-    height: 36px;
+    height: 34px;
+    max-width: 145px;
+  }
+
+  .nav-actions {
+    gap: 0.35rem;
   }
 
   .toggle-btn {
@@ -356,61 +543,131 @@
     font-size: 0.78rem;
   }
 
-  .theme-toggle {
-    width: 36px;
-  }
-
+  .theme-toggle,
   .mobile-toggle {
     width: 36px;
     height: 36px;
     padding: 7px;
   }
 
+  .navbar-minimal .nav-brand img {
+    height: 28px;
+    max-width: 112px;
+  }
+
+  .navbar-minimal .nav-cta {
+    height: 34px;
+    padding: 0 0.65rem;
+    font-size: 0.74rem;
+    gap: 0.25rem;
+  }
+
+  .navbar-minimal .nav-cta i {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.22;
+  }
+
+  .hero-image-wrapper {
+    border-width: 4px;
+  }
+
+  .hero-image-wrapper img {
+    height: 260px;
+  }
+
+  .product-grid,
+  .testimonials-grid,
+  .blog-grid,
+  .features-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-meta {
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
   .section-tag {
-    font-size: 0.78rem;
-    padding: 0.35rem 0.95rem;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.9rem;
+    letter-spacing: 0.08em;
+  }
+
+  .btn,
+  .btn-lg {
+    white-space: normal;
+    max-width: 100%;
+    text-align: center;
   }
 
   .btn {
-    padding: 0.75rem 1.45rem;
-    font-size: 0.9rem;
+    padding: 0.72rem 1.35rem;
+    font-size: 0.88rem;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.35rem;
+    font-size: 0.94rem;
+  }
+
+  .form-card,
+  .auth-card {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .newsletter-card {
+    padding: 1.75rem 1.1rem;
+  }
+
+  .table-custom th,
+  .table-custom td {
+    padding: 0.85rem 0.9rem;
+    font-size: 0.84rem;
+  }
+
+  .info-card-header,
+  .info-card-body {
+    padding: 1.15rem;
   }
 
   .modal-dialog {
-    margin: 1rem;
+    margin: 0.75rem;
   }
 
   .modal-header,
   .modal-body {
-    padding: 1.25rem 1.25rem;
+    padding: 1.25rem 1.15rem;
+  }
+
+  .footer-contact-item,
+  .product-desc,
+  .hero-desc,
+  .section-desc,
+  .testimonial-text {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 
-/* 8. Mobile Standard (360px) */
-@media (max-width: 360px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-lg {
-    padding: 0.85rem 1.5rem;
-    font-size: 0.95rem;
-  }
-}
-
-/* 9. Small Mobile (320px) */
+/* 8. Extra Small Mobile (320px) */
 @media (max-width: 320px) {
   .container {
-    padding-left: 0.85rem;
-    padding-right: 0.85rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 
   .nav-brand img {
-    height: 32px;
+    height: 30px;
+    max-width: 125px;
   }
 
   .navbar {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .toggle-btn {
@@ -418,12 +675,13 @@
     font-size: 0.72rem;
   }
 
-  .form-card {
-    padding: 1.5rem 1rem;
+  .form-card,
+  .auth-card {
+    padding: 1.35rem 0.95rem;
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 }
 

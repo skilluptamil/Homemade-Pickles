@@ -56,7 +56,6 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -84,8 +83,8 @@
        ========================================================================== -->
   <section class="page-hero" id="blogDetailHero">
     <div class="container" style="max-width: 900px;">
-      <span class="section-tag"><i class="fa-solid fa-pepper-hot"></i> Traditional Recipe Masterclass</span>
-      <h1 class="section-title" style="font-size: clamp(2rem, 3.5vw, 3rem);">
+      <span class="section-tag" id="blogDetailTag"><i class="fa-solid fa-pepper-hot"></i> Traditional Recipe Masterclass</span>
+      <h1 class="section-title" id="blogDetailTitle" style="font-size: clamp(1.85rem, 3.5vw, 3rem);">
         The Secret Art of Traditional Sun-Cured Raw Mango Pickle
       </h1>
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -93,7 +92,7 @@
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
         <a href="blog.html">Blog</a>
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="breadcrumb-current">Sun-Cured Mango Pickle</span>
+        <span class="breadcrumb-current" id="blogDetailCrumb">Sun-Cured Mango Pickle</span>
       </nav>
     </div>
   </section>
@@ -103,18 +102,18 @@
        ========================================================================== -->
   <section class="section" id="blogContentSection">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start;">
+      <div class="blog-detail-layout">
         <!-- Main Article Body -->
         <main>
           <!-- Author & Meta bar -->
           <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
             <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary);">
+              <div style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary); flex-shrink: 0;">
                 <img src="assets/images/blog/blog-author-avatar.jpg" alt="Parvati Devi - Master Custodian" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
               <div>
-                <h5 style="margin-bottom: 0.15rem;">Parvati Devi</h5>
-                <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0;">Head Kitchen Custodian • May 14, 2026</p>
+                <h5 id="blogDetailAuthor" style="margin-bottom: 0.15rem;">Parvati Devi</h5>
+                <p id="blogDetailMeta" style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0;">Head Kitchen Custodian • May 14, 2026</p>
               </div>
             </div>
 
@@ -129,17 +128,17 @@
           </div>
 
           <!-- Featured Image -->
-          <div style="width: 100%; height: 420px; border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 2.5rem; box-shadow: var(--shadow-md);">
-            <img src="assets/images/blog/blog-details-main.jpg" alt="Traditional clay barnis aging raw mango pickle under direct sunlight" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="blog-hero-media">
+            <img id="blogDetailImage" src="assets/images/blog/blog-details-main.jpg" alt="Traditional clay barnis aging raw mango pickle under direct sunlight">
           </div>
 
           <!-- Article Text -->
-          <div style="font-size: 1.08rem; line-height: 1.85; color: var(--text-body);">
+          <div class="blog-article-content" id="blogArticleBody">
             <p>
               When summer arrives across northern and central India, the fragrance of pungent cold-pressed mustard oil, cracked fenugreek, and tart green mangoes fills ancestral courtyards. For over three millennia, the subcontinent understood something modern food corporations frequently forget: <em>the finest preservative on Earth is patient, unhurried sunshine.</em>
             </p>
 
-            <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem 0;">Why Electrical Dehydrators Ruin Authentic Achar</h3>
+            <h3>Why Electrical Dehydrators Ruin Authentic Achar</h3>
             <p>
               Many industrial pickle factories rush mangoes through hot-air blowers to strip moisture in 90 minutes. But rapid heat breaks down the cellular pectin inside raw mango flesh, turning the pieces mushy within weeks.
             </p>
@@ -148,32 +147,32 @@
             </p>
 
             <!-- Section 4: Related Step-by-Step Images -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0;">
+            <div class="mini-grid-2" style="margin: 2.25rem 0;">
               <div>
-                <div style="height: 220px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.5rem;">
-                  <img src="assets/images/blog/blog-details-step1.jpg" alt="Hand selecting firm raw green mangoes" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="blog-step-media">
+                  <img src="assets/images/blog/blog-details-step1.jpg" alt="Hand selecting firm raw green mangoes">
                 </div>
-                <span style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">Step 1: Selecting unblemished Ramkela raw mangoes.</span>
+                <span class="blog-step-caption">Step 1: Selecting unblemished Ramkela raw mangoes.</span>
               </div>
               <div>
-                <div style="height: 220px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 0.5rem;">
-                  <img src="assets/images/blog/blog-details-step2.jpg" alt="Stone pounding whole dry spices on cast iron tawa" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="blog-step-media">
+                  <img src="assets/images/blog/blog-details-step2.jpg" alt="Stone pounding whole dry spices on cast iron tawa">
                 </div>
-                <span style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">Step 2: Slow-roasting whole spices on cast-iron tawas.</span>
+                <span class="blog-step-caption">Step 2: Slow-roasting whole spices on cast-iron tawas.</span>
               </div>
             </div>
 
-            <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem 0;">The Alchemy of Wooden-Churned Kachi Ghani Oil</h3>
+            <h3>The Alchemy of Wooden-Churned Kachi Ghani Oil</h3>
             <p>
               The oil in a traditional pickle jar is not merely a lubricant—it is a liquid airtight seal. By completely submerging every piece of mango below cold-pressed mustard oil, airborne mold spores and wild fungi cannot access oxygen. Furthermore, cold-pressed mustard oil contains allyl isothiocyanate, a potent natural antimicrobial compound that inhibits spoilage bacteria while nurturing gut-friendly lactobacillus strains.
             </p>
 
             <!-- Pull Quote Callout -->
-            <blockquote style="border-left: 4px solid var(--primary); padding: 1.5rem 2rem; background: var(--bg-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-family: var(--font-subheading); font-style: italic; font-size: 1.25rem; color: var(--text-main); margin: 2rem 0;">
+            <blockquote>
               "A true martaban of achar must never be hurried. When you hear the lid tied with twine whistle softly under the afternoon sun, you know the earthen pot is breathing life into the spices."
             </blockquote>
 
-            <h3 style="font-size: 1.6rem; margin: 2rem 0 1rem 0;">Porcelain Barnis: The Forgotten Thermodynamic Vessel</h3>
+            <h3>Porcelain Barnis: The Forgotten Thermodynamic Vessel</h3>
             <p>
               In our kitchen at Dadi's Swad, metal ladles and plastic containers are strictly prohibited around curing vats. Glazed porcelain martabans insulate the fermenting fruit from sharp nighttime drops in temperature while gently diffusing daytime solar heat.
             </p>
@@ -184,7 +183,7 @@
 
           <!-- Section 7: Social Sharing Links & Tags -->
           <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; margin-top: 3rem; border-top: 1px solid var(--border-color); flex-wrap: wrap; gap: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <div id="blogDetailTags" style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Tags:</span>
               <span class="badge badge-primary">#MangoPickle</span>
               <span class="badge badge-secondary">#SunFermentation</span>
@@ -204,34 +203,36 @@
           <!-- Search Widget -->
           <div style="background: var(--bg-card); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem;">
             <h4 style="font-size: 1.15rem; margin-bottom: 1rem;">Search Recipes</h4>
-            <div class="search-box" style="min-width: 100%;">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search blog...">
-            </div>
+            <form id="blogSidebarSearchForm">
+              <div class="search-box" style="min-width: 100%;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search blog..." aria-label="Search Blog">
+              </div>
+            </form>
           </div>
 
           <!-- Recent Articles Widget -->
           <div style="background: var(--bg-card); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem;">
             <h4 style="font-size: 1.15rem; margin-bottom: 1.25rem;">Recent Chronicles</h4>
-            <ul style="display: flex; flex-direction: column; gap: 1rem;">
+            <ul id="blogRecentList" style="display: flex; flex-direction: column; gap: 1rem;">
               <li style="display: flex; gap: 0.85rem; align-items: center;">
-                <img src="assets/images/blog/blog-recent-1.jpg" alt="Instant Raw Mango Pickle" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
+                <img src="assets/images/blog/blog-recent-1.jpg" alt="Zero-Oil Lemon Pickle" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
                 <div>
-                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog.html">Instant Raw Mango Pickle Preparation</a></h6>
+                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog-details.html?post=lemon-pickle">Zero-Oil Lemon Pickle Fermentation</a></h6>
                   <span style="font-size: 0.75rem; color: var(--text-muted);">Apr 28, 2026</span>
                 </div>
               </li>
               <li style="display: flex; gap: 0.85rem; align-items: center;">
-                <img src="assets/images/blog/blog-recent-2.jpg" alt="Crisp Rice Papad" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
+                <img src="assets/images/blog/blog-recent-2.jpg" alt="Types of Indian Papads" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
                 <div>
-                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog.html">Crisp Rice Papads and Traditional Meals</a></h6>
+                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog-details.html?post=indian-papad">Different Types of Indian Papads</a></h6>
                   <span style="font-size: 0.75rem; color: var(--text-muted);">Apr 12, 2026</span>
                 </div>
               </li>
               <li style="display: flex; gap: 0.85rem; align-items: center;">
-                <img src="assets/images/blog/blog-recent-3.jpg" alt="Traditional Cucumber Achar" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
+                <img src="assets/images/blog/blog-recent-3.jpg" alt="Natural Preservation Science" style="width: 60px; height: 60px; border-radius: var(--radius-sm); object-fit: cover; flex-shrink: 0;">
                 <div>
-                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog.html">Himalayan Herbal Achar Traditions</a></h6>
+                  <h6 style="font-size: 0.88rem; margin-bottom: 0.2rem; text-transform: none; letter-spacing: normal;"><a href="blog-details.html?post=food-preservation">Traditional Food Preservation Secrets</a></h6>
                   <span style="font-size: 0.75rem; color: var(--text-muted);">Mar 24, 2026</span>
                 </div>
               </li>
@@ -242,9 +243,9 @@
           <div style="background: var(--bg-card); padding: 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 2rem;">
             <h4 style="font-size: 1.15rem; margin-bottom: 1rem;">Recipe Categories</h4>
             <ul class="footer-links">
-              <li><a href="blog.html" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Pickle Making Masterclasses (12)</a></li>
-              <li><a href="blog.html" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Sun-Dried Papad Craft (8)</a></li>
-              <li><a href="blog.html" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Ayurvedic Health &amp; Spices (15)</a></li>
+              <li><a href="blog.html?cat=recipes" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Pickle Making Masterclasses (12)</a></li>
+              <li><a href="blog.html?cat=papad" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Sun-Dried Papad Craft (8)</a></li>
+              <li><a href="blog.html?cat=preservation" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Ayurvedic Health &amp; Spices (15)</a></li>
               <li><a href="blog.html" style="color: var(--text-body);"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i> Courtyard Stories &amp; Culture (6)</a></li>
             </ul>
           </div>
@@ -252,9 +253,9 @@
           <!-- Promotional Jar Box -->
           <div style="background: linear-gradient(135deg, var(--primary), #8B2500); padding: 2rem; border-radius: var(--radius-lg); color: #fff; text-align: center;">
             <i class="fa-solid fa-jar" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
-            <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">Taste This Heritage Mango Pickle</h4>
-            <p style="font-size: 0.88rem; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">Handcrafted using the exact 40-day sun cured method described in this article.</p>
-            <a href="product-details.html" class="btn btn-secondary btn-sm" style="width: 100%;">Order 500g Jar (₹280)</a>
+            <h4 id="blogPromoTitle" style="color: #fff; font-size: 1.25rem; margin-bottom: 0.5rem;">Taste This Heritage Mango Pickle</h4>
+            <p id="blogPromoDesc" style="font-size: 0.88rem; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem;">Handcrafted using the exact 40-day sun cured method described in this article.</p>
+            <a id="blogPromoBtn" href="product-details.html" class="btn btn-secondary btn-sm" style="width: 100%;">Order 500g Jar (₹280)</a>
           </div>
         </aside>
       </div>
@@ -272,40 +273,40 @@
         <div class="ornament"><i class="fa-solid fa-bookmark ornament-icon"></i></div>
       </div>
 
-      <div class="blog-grid">
+      <div class="blog-grid" id="relatedBlogGrid">
         <article class="blog-card">
           <div class="blog-media">
             <span class="blog-badge">Recipes</span>
             <img src="assets/images/blog/blog-related-1.jpg" alt="Lentils Rice and Roasted Papad" loading="lazy">
           </div>
           <div class="blog-content">
-            <h3 class="blog-title"><a href="blog.html">Yellow Dal, Cumin Rice and Roasted Papad Traditions</a></h3>
-            <p class="blog-desc">Why the humble roasted papad remains the quintessential companion to Indian comfort meals.</p>
-            <a href="blog.html" class="blog-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            <h3 class="blog-title"><a href="blog-details.html?post=lemon-pickle">Homemade Lemon Pickle: Zero-Oil Fermentation</a></h3>
+            <p class="blog-desc">How black salt, ajwain, and bright sun rays cure thin Kagzi lemons cleanly.</p>
+            <a href="blog-details.html?post=lemon-pickle" class="blog-link">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
 
         <article class="blog-card">
           <div class="blog-media">
-            <span class="blog-badge">Spices</span>
+            <span class="blog-badge">Papad Craft</span>
             <img src="assets/images/blog/blog-related-2.jpg" alt="Ginger Green Chilli Pickle" loading="lazy">
           </div>
           <div class="blog-content">
-            <h3 class="blog-title"><a href="blog.html">Ginger &amp; Fresh Green Chilli: The Winter Warmth Tonic</a></h3>
-            <p class="blog-desc">Sun-cured seasonal roots and fresh slivered chillies in cold-pressed mustard oil.</p>
-            <a href="blog.html" class="blog-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            <h3 class="blog-title"><a href="blog-details.html?post=indian-papad">Different Types of Indian Papad &amp; Appalam</a></h3>
+            <p class="blog-desc">Discover regional hand-rolled papad traditions from Amritsar to Kerala.</p>
+            <a href="blog-details.html?post=indian-papad" class="blog-link">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
 
         <article class="blog-card">
           <div class="blog-media">
-            <span class="blog-badge">Fermentation</span>
+            <span class="blog-badge">Preservation</span>
             <img src="assets/images/blog/blog-related-3.jpg" alt="Traditional Fermented Green Achar" loading="lazy">
           </div>
           <div class="blog-content">
-            <h3 class="blog-title"><a href="blog.html">Ancient Wild Fermentation in Earthen Clay Barnis</a></h3>
-            <p class="blog-desc">How beneficial probiotics develop naturally without synthetic vinegar or preservatives.</p>
-            <a href="blog.html" class="blog-link">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            <h3 class="blog-title"><a href="blog-details.html?post=food-preservation">Traditional Preservation Without Additives</a></h3>
+            <p class="blog-desc">How natural rock salt, mustard oil, and antimicrobial spices prevent spoilage naturally.</p>
+            <a href="blog-details.html?post=food-preservation" class="blog-link">Read Full Story <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </article>
       </div>
@@ -320,7 +321,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-widget">
-          <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          <div class="footer-brand"><a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></a></div>
           <p class="footer-about-text">Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.</p>
           <div class="social-links">
             <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -352,7 +353,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 

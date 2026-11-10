@@ -76,7 +76,6 @@
         <!-- Right: Actions (LTR/RTL, Dark/Light, ONE Primary CTA) -->
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -102,32 +101,32 @@
   <!-- ==========================================================================
        Section 1: Unique Hero Section (Editorial Split Banner, Distinct Image & Composition)
        ========================================================================== -->
-  <section class="hero" id="home2Hero" style="background: linear-gradient(135deg, rgba(254, 243, 199, 0.5) 0%, rgba(253, 242, 242, 0.5) 100%), var(--bg-main);">
+  <section class="hero hero-alt" id="home2Hero">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div class="split-grid" style="gap: 3.5rem;">
         <div class="hero-visual" style="order: 1;">
           <div class="hero-image-wrapper" style="border-radius: 40px; border: 10px solid var(--bg-card); box-shadow: var(--shadow-hover);">
             <img src="assets/images/home/hero-home2.jpg" alt="Crisp roasted papads with traditional spicy pickle relishes" width="540" height="500" loading="eager">
           </div>
           <!-- Hero badge -->
-          <div class="floating-card" style="bottom: 10%; left: -5%; background: var(--primary); color: #fff; border: none;">
+          <div class="floating-card floating-card-1" style="top: auto; bottom: 10%; background: var(--primary); color: #fff; border: none;">
             <div class="floating-card-icon" style="background: rgba(255,255,255,0.2); color: #fff;">
               <i class="fa-solid fa-fire"></i>
             </div>
             <div class="floating-card-text">
               <h5 style="color: #fff;">Sun-Fermented</h5>
-              <p style="color: rgba(255,255,255,0.85);">Pure Kachi Ghani Mustard Oil</p>
+              <p style="color: rgba(255,255,255,0.9);">Pure Kachi Ghani Mustard Oil</p>
             </div>
           </div>
         </div>
 
         <div style="order: 2;">
-          <div class="hero-badge" style="background: var(--secondary-light); color: var(--secondary-hover); border-color: rgba(217, 119, 6, 0.3);">
+          <div class="hero-badge hero-badge-amber">
             <i class="fa-solid fa-award"></i>
             <span>Traditional Indian Food Culture</span>
           </div>
-          <h1 style="font-size: clamp(2.2rem, 4vw, 3.8rem); line-height: 1.15; margin-bottom: 1.5rem;">
-            Heirloom Flavours of <span style="color: var(--primary);">Real Desi Pickles</span> &amp; Crunchy Papads
+          <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.15; margin-bottom: 1.5rem;">
+            Heirloom Flavours of <span>Real Desi Pickles</span> &amp; Crunchy Papads
           </h1>
           <p style="font-size: 1.12rem; color: var(--text-body); line-height: 1.8; margin-bottom: 2.25rem;">
             Every single jar is an ode to authentic Indian regional taste. No factory conveyors, no automated presses. Only pure sun-drying, stone-ground masalas, and earthenware seasoning that revives your fondest dining memories.
@@ -143,7 +142,7 @@
           </div>
 
           <!-- Quick Statistics Bar -->
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding-top: 1.75rem; border-top: 1px solid var(--border-color);">
+          <div class="stats-mini-grid-3">
             <div>
               <h3 style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.15rem;">42+ Yrs</h3>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Family Heritage</p>
@@ -176,63 +175,63 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+      <div class="features-grid">
         <!-- Flavor Card 1 -->
-        <div class="feature-card" style="text-align: left; padding: 2.25rem;">
+        <div class="feature-card feature-card-left">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
             <span class="badge badge-primary">Tangy &amp; Bold</span>
             <i class="fa-solid fa-lemon" style="font-size: 1.75rem; color: var(--secondary);"></i>
           </div>
           <h3 style="font-size: 1.25rem; margin-bottom: 0.65rem;">Sun-Cured Citrus</h3>
-          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          <p class="feature-desc" style="text-align: left; margin-bottom: 1.25rem;">
             Matured in natural citrus juices with carom seeds, black salt, and dry ginger. Ideal digestive accompaniment.
           </p>
-          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary);">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-top: auto;">
             Best with: Dal Khichdi, Stuffed Methi Paratha
           </div>
         </div>
 
         <!-- Flavor Card 2 -->
-        <div class="feature-card" style="text-align: left; padding: 2.25rem;">
+        <div class="feature-card feature-card-left">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
             <span class="badge badge-spice">Fiery Pungent</span>
             <i class="fa-solid fa-pepper-hot" style="font-size: 1.75rem; color: var(--spice-red);"></i>
           </div>
           <h3 style="font-size: 1.25rem; margin-bottom: 0.65rem;">Mustard &amp; Red Chilli</h3>
-          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          <p class="feature-desc" style="text-align: left; margin-bottom: 1.25rem;">
             Cold-pressed yellow mustard oil blended with crushed Guntur sun-dried chillies and coarse fenugreek seeds.
           </p>
-          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary);">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-top: auto;">
             Best with: Aloo Puri, Dal Tadka &amp; Rice
           </div>
         </div>
 
         <!-- Flavor Card 3 -->
-        <div class="feature-card" style="text-align: left; padding: 2.25rem;">
+        <div class="feature-card feature-card-left">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
             <span class="badge badge-secondary">Garlic Infusion</span>
             <i class="fa-solid fa-cubes-stacked" style="font-size: 1.75rem; color: var(--secondary);"></i>
           </div>
           <h3 style="font-size: 1.25rem; margin-bottom: 0.65rem;">Desi Pod Tempering</h3>
-          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          <p class="feature-desc" style="text-align: left; margin-bottom: 1.25rem;">
             Slowly cooked whole garlic cloves steeped in til (sesame) oil with compounded asafoetida and roasted cumin.
           </p>
-          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary);">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-top: auto;">
             Best with: Jowar Bhakri, Thepla, Curd Rice
           </div>
         </div>
 
         <!-- Flavor Card 4 -->
-        <div class="feature-card" style="text-align: left; padding: 2.25rem;">
+        <div class="feature-card feature-card-left">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
             <span class="badge badge-accent">Crunch &amp; Pepper</span>
             <i class="fa-solid fa-cookie" style="font-size: 1.75rem; color: var(--accent);"></i>
           </div>
           <h3 style="font-size: 1.25rem; margin-bottom: 0.65rem;">Black Pepper Crunch</h3>
-          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+          <p class="feature-desc" style="text-align: left; margin-bottom: 1.25rem;">
             Stone-rolled urad dough pounded with crushed Tellicherry black peppercorns, dried under shade for peak crispness.
           </p>
-          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary);">
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-top: auto;">
             Best with: Sambar Rice, Biryani, Evening Tea
           </div>
         </div>
@@ -410,7 +409,7 @@
        ========================================================================== -->
   <section class="section" id="preparationStory">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 4rem; align-items: center;">
+      <div class="split-grid-wide-left">
         <div>
           <span class="section-tag"><i class="fa-solid fa-clock-rotate-left"></i> Heritage Heritage</span>
           <h2 class="section-title">The Sacred Rhythm of Our Courtyard Kitchen</h2>
@@ -471,7 +470,7 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;">
+      <div class="split-grid">
         <div class="hero-visual">
           <div class="hero-image-wrapper" style="border-radius: var(--radius-lg);">
             <img src="assets/images/home/bulk-gifting-home2.jpg" alt="Traditional festive food gift basket with jars of condiments" width="500" height="420" loading="lazy">
@@ -514,7 +513,7 @@
        ========================================================================== -->
   <section class="section" id="reviewsAndContactPreview">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 3.5rem; align-items: center;">
+      <div class="split-grid-wide-left">
         <div>
           <span class="section-tag"><i class="fa-solid fa-star"></i> Customer Testimonial</span>
           <h2 class="section-title">"The Only Pickle In My Pantry For 5 Years"</h2>
@@ -636,7 +635,9 @@
       <div class="footer-grid">
         <div class="footer-widget">
           <div class="footer-brand">
-            <img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50">
+            <a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage">
+              <img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50">
+            </a>
           </div>
           <p class="footer-about-text">
             Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.
@@ -671,7 +672,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 

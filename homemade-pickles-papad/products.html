@@ -56,7 +56,6 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -103,9 +102,9 @@
        ========================================================================== -->
   <section class="section section-alt" style="padding: 3.5rem 0;" id="featuredCollections">
     <div class="container">
-      <div style="background: linear-gradient(135deg, var(--primary), #B23A22); border-radius: var(--radius-xl); padding: 2.5rem 3rem; color: #fff; display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: 2.5rem; box-shadow: var(--shadow-lg);">
+      <div class="banner-split" style="background: linear-gradient(135deg, var(--primary), #B23A22); color: #fff; box-shadow: var(--shadow-lg); border: none;">
         <div>
-          <span class="badge" style="background: rgba(255,255,255,0.25); color: #fff; margin-bottom: 0.75rem;">Seasonal Bestseller</span>
+          <span class="badge" style="background: #7F1D1D; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.45); margin-bottom: 0.75rem;">Seasonal Bestseller</span>
           <h2 style="color: #fff; font-size: 2rem; margin-bottom: 0.75rem;">Summer Sun-Cured Raw Mango Avakaya</h2>
           <p style="color: rgba(255,255,255,0.9); line-height: 1.6; margin-bottom: 1.5rem;">
             Prepared with hand-plucked green Ramkela mangoes, unrefined yellow mustard oil, and Guntur dried chillies. Available in airtight 500g and 1kg glass jars.
@@ -461,7 +460,7 @@
        ========================================================================== -->
   <section class="section section-cream" id="ingredientsQuality">
     <div class="container">
-      <div class="hero-grid" style="grid-template-columns: 1fr 1.2fr; align-items: center; gap: 3.5rem;">
+      <div class="split-grid-wide-right">
         <div class="hero-visual">
           <div class="hero-image-wrapper" style="border-radius: var(--radius-lg);">
             <img src="assets/images/products/quality-ingredients.jpg" alt="Whole natural spices, mustard seeds, red chillies" width="500" height="420" loading="lazy">
@@ -478,7 +477,7 @@
             The secret to nostalgic pickle flavour isn't preservatives—it is the unadulterated freshness of raw ingredients. We source directly from native farming regions:
           </p>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+          <div class="mini-grid-2">
             <div style="background: var(--bg-card); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
               <h5 style="margin-bottom: 0.25rem; color: var(--primary);">Kachi Ghani Mustard Oil</h5>
               <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Cold-pressed from organic yellow &amp; black mustard seeds.</p>
@@ -515,13 +514,13 @@
         </p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+      <div class="sizes-grid">
         <!-- Size 1 -->
         <div class="feature-card">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-jar"></i></div>
           <h3 class="feature-title">250g Glass Jar</h3>
           <p class="feature-desc">Perfect sampler size for individuals, students, and gifting diverse flavour varieties.</p>
-          <span class="badge badge-secondary" style="margin-top: 0.5rem;">Sample Size</span>
+          <span class="badge badge-secondary">Sample Size</span>
         </div>
 
         <!-- Size 2 -->
@@ -529,7 +528,7 @@
           <div class="feature-icon-wrapper"><i class="fa-solid fa-jar-wheat"></i></div>
           <h3 class="feature-title">500g Glass Jar</h3>
           <p class="feature-desc">Our most popular size for everyday family dining. Sealed with traditional gold lid &amp; moisture ring.</p>
-          <span class="badge badge-primary" style="margin-top: 0.5rem;">Most Popular</span>
+          <span class="badge badge-primary">Most Popular</span>
         </div>
 
         <!-- Size 3 -->
@@ -537,7 +536,7 @@
           <div class="feature-icon-wrapper"><i class="fa-solid fa-bucket"></i></div>
           <h3 class="feature-title">1kg Family Tub</h3>
           <p class="feature-desc">Food-grade sturdy canister for large households and long-term pantry storage (12 months shelf-life).</p>
-          <span class="badge badge-accent" style="margin-top: 0.5rem;">Value Pack</span>
+          <span class="badge badge-accent">Value Pack</span>
         </div>
 
         <!-- Size 4 -->
@@ -545,7 +544,7 @@
           <div class="feature-icon-wrapper"><i class="fa-solid fa-box-open"></i></div>
           <h3 class="feature-title">5kg &amp; 20kg Bulk Drums</h3>
           <p class="feature-desc">Food-grade bulk drums and vacuum pouch cartons for caterers, restaurants, and wholesale.</p>
-          <span class="badge badge-primary" style="margin-top: 0.5rem;">Wholesale Tier</span>
+          <span class="badge badge-primary">Wholesale Tier</span>
         </div>
       </div>
     </div>
@@ -676,7 +675,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-widget">
-          <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          <div class="footer-brand"><a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></a></div>
           <p class="footer-about-text">Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.</p>
           <div class="social-links">
             <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -708,7 +707,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 

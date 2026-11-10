@@ -61,12 +61,38 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* 3. Helper Validation Functions */
+  function validateName(name) {
+    var trimmed = name.trim();
+    if (!trimmed) {
+      return { valid: false, message: 'Please enter a valid name.' };
+    }
+    if (/[0-9]/.test(trimmed)) {
+      return { valid: false, message: 'Name cannot contain numbers.' };
+    }
+    if (!/^[A-Za-zÀ-ÖØ-öø-ÿ\u0900-\u097F' .-]+$/.test(trimmed)) {
+      return { valid: false, message: 'Name cannot contain invalid special characters.' };
+    }
+    if (/^['.-]|['-]$|[.'-]{2}/.test(trimmed)) {
+      return { valid: false, message: 'Please enter a valid full name without repeated punctuation.' };
+    }
+    var lettersOnly = trimmed.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\u0900-\u097F]/g, '');
+    if (lettersOnly.length < 2) {
+      return { valid: false, message: 'Name must contain at least 2 letters.' };
+    }
+    return { valid: true, message: '' };
+  }
+
+  function isNameField(field) {
+    return field.getAttribute('data-validate') === 'name' || /name/i.test(field.id || field.name || '');
+  }
+
   function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
   function validatePhone(phone) {
-    return /^[0-9+-\s()]{7,15}$/.test(phone);
+    var digits = phone.replace(/\D/g, '');
+    return /^[0-9+\-\s()]{7,18}$/.test(phone) && digits.length >= 7 && digits.length <= 15;
   }
 
   function setFieldValidation(input, isValid, errorMsg) {
@@ -76,10 +102,52 @@ document.addEventListener('DOMContentLoaded', function () {
     var feedback = group.querySelector('.invalid-feedback');
     if (!isValid) {
       group.classList.add('is-invalid');
+      input.setAttribute('aria-invalid', 'true');
       if (feedback && errorMsg) feedback.textContent = errorMsg;
     } else {
       group.classList.remove('is-invalid');
+      input.removeAttribute('aria-invalid');
     }
+  }
+
+  function validateSingleField(field) {
+    if (field.type === 'checkbox') {
+      var checked = field.checked;
+      setFieldValidation(field, checked, 'You must accept the terms.');
+      return checked;
+    }
+
+    var val = field.value.trim();
+    var isValid = true;
+    var msg = 'This field is required.';
+
+    if (!val) {
+      isValid = false;
+    } else if (isNameField(field)) {
+      var nameCheck = validateName(val);
+      if (!nameCheck.valid) {
+        isValid = false;
+        msg = nameCheck.message;
+      }
+    } else if (field.type === 'email' && !validateEmail(val)) {
+      isValid = false;
+      msg = 'Please enter a valid email address.';
+    } else if (field.type === 'tel' && !validatePhone(val)) {
+      isValid = false;
+      msg = 'Please enter a valid phone number.';
+    } else if (field.id === 'regPassword' && val.length < 8) {
+      isValid = false;
+      msg = 'Password must be at least 8 characters.';
+    } else if (field.id === 'regConfirmPassword') {
+      var pwd = document.getElementById('regPassword');
+      if (pwd && pwd.value !== val) {
+        isValid = false;
+        msg = 'Passwords do not match.';
+      }
+    }
+
+    setFieldValidation(field, isValid, msg);
+    return isValid;
   }
 
   /* 4. Form Validation Handlers */
@@ -89,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { id: 'bulkOrderForm', successMsg: 'Bulk enquiry submitted successfully! We will prepare a customized quote. (Demonstration Only)' },
     { id: 'quickEnquiryForm', successMsg: 'Enquiry submitted successfully! (Demonstration Only)' },
     { id: 'modalEnquiryForm', successMsg: 'Enquiry received! We will connect with you on WhatsApp / Phone. (Demonstration Only)' },
-    { id: 'loginForm', successMsg: 'Logged in successfully! Redirecting to dashboard... (Demonstration Only)', redirect: 'dashboard.html' },
+    { id: 'loginForm', successMsg: 'Logged in successfully! Redirecting to home page... (Demonstration Only)', redirect: 'index.html' },
     { id: 'registerForm', successMsg: 'Registration completed! Welcome to Dadi\'s Swad family. (Demonstration Only)', redirect: 'login.html' }
   ];
 
@@ -104,28 +172,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // Validate required inputs
       var requiredFields = form.querySelectorAll('[required]');
       requiredFields.forEach(function (field) {
-        var val = field.value.trim();
-        var isValid = true;
-        var msg = 'This field is required.';
-
-        if (!val) {
-          isValid = false;
-        } else if (field.type === 'email' && !validateEmail(val)) {
-          isValid = false;
-          msg = 'Please enter a valid email address.';
-        } else if (field.type === 'tel' && !validatePhone(val)) {
-          isValid = false;
-          msg = 'Please enter a valid phone number.';
-        } else if (field.id === 'regConfirmPassword') {
-          var pwd = document.getElementById('regPassword');
-          if (pwd && pwd.value !== val) {
-            isValid = false;
-            msg = 'Passwords do not match.';
-          }
+        if (!validateSingleField(field)) {
+          hasError = true;
         }
-
-        setFieldValidation(field, isValid, msg);
-        if (!isValid) hasError = true;
       });
 
       if (!hasError) {
@@ -150,6 +199,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         form.reset();
+        if (strengthBar) strengthBar.style.width = '0%';
+        if (strengthText) strengthText.textContent = '';
 
         if (formConfig.redirect) {
           setTimeout(function () {
@@ -159,12 +210,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    // Clear validation state on typing
-    form.querySelectorAll('.form-control, .form-select, .form-textarea').forEach(function (input) {
+    // Live validation on blur and while correcting invalid state
+    form.querySelectorAll('.form-control, .form-select, .form-textarea, input[type="checkbox"]').forEach(function (input) {
+      input.addEventListener('blur', function () {
+        if (input.hasAttribute('required') && input.value.trim().length > 0) {
+          validateSingleField(input);
+        }
+      });
+
       input.addEventListener('input', function () {
+        if (isNameField(input) && input.value.trim().length > 0) {
+          var check = validateName(input.value);
+          // Show immediate warning if user types a digit or invalid symbol in a name field
+          if (/[0-9]/.test(input.value) || !/^[A-Za-zÀ-ÖØ-öø-ÿ\u0900-\u097F' .-]*$/.test(input.value)) {
+            setFieldValidation(input, false, check.message);
+            return;
+          }
+        }
         var group = input.closest('.form-group');
         if (group && group.classList.contains('is-invalid')) {
-          group.classList.remove('is-invalid');
+          validateSingleField(input);
         }
       });
     });

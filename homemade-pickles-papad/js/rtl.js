@@ -27,11 +27,11 @@
     var buttons = document.querySelectorAll('.rtl-toggle');
     buttons.forEach(function (btn) {
       if (dir === 'rtl') {
-        btn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i> <span>LTR</span>';
+        btn.innerHTML = '<span>LTR</span>';
         btn.setAttribute('title', 'Switch to Left-to-Right layout');
         btn.setAttribute('aria-label', 'Switch to Left-to-Right layout');
       } else {
-        btn.innerHTML = '<i class="fa-solid fa-repeat" aria-hidden="true"></i> <span>RTL</span>';
+        btn.innerHTML = '<span>RTL</span>';
         btn.setAttribute('title', 'Switch to Right-to-Left layout');
         btn.setAttribute('aria-label', 'Switch to Right-to-Left layout');
       }
@@ -49,8 +49,9 @@
   var initialDir = getSavedDirection();
   applyDirection(initialDir);
 
-  // Attach event listeners
+  // Attach event listeners and sync button text once DOM is ready
   document.addEventListener('DOMContentLoaded', function () {
+    updateRTLButtonText(getSavedDirection());
     var buttons = document.querySelectorAll('.rtl-toggle');
     buttons.forEach(function (btn) {
       btn.addEventListener('click', toggleDirection);

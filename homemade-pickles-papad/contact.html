@@ -56,7 +56,6 @@
 
         <div class="nav-actions">
           <button type="button" class="toggle-btn rtl-toggle" aria-label="Toggle text direction LTR/RTL">
-            <i class="fa-solid fa-repeat" aria-hidden="true"></i>
             <span>RTL</span>
           </button>
 
@@ -157,7 +156,7 @@
        ========================================================================== -->
   <section class="section section-alt" style="padding-top: 0; padding-bottom: 4rem;" id="googleMapSection">
     <div class="container">
-      <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); height: 380px;">
+      <div class="map-wrapper">
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115408.08799797042!2d82.90870685959604!3d25.321684085449557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2db76febcf4d%3A0x68131710853ff0b5!2sVaranasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
           width="100%" 
@@ -177,7 +176,7 @@
        ========================================================================== -->
   <section class="section" id="generalEnquiry">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+      <div class="split-grid-start">
         <div>
           <span class="section-tag"><i class="fa-solid fa-message"></i> General Query</span>
           <h2 class="section-title">Send a Quick Message to Our Kitchen</h2>
@@ -322,7 +321,9 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-widget">
-          <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          <a href="index.html" class="footer-brand-link" aria-label="Dadi's Swad Homepage">
+            <div class="footer-brand"><img src="assets/logos/logo-white.svg" alt="Dadi's Swad White Logo" width="220" height="50"></div>
+          </a>
           <p class="footer-about-text">Handcrafting authentic Indian pickles, traditional sun-dried papads, and stone-ground spices since 1984. 100% natural cold-pressed oils, solar fermentation, and zero preservatives.</p>
           <div class="social-links">
             <a href="https://facebook.com" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -354,7 +355,6 @@
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
-            <li><a href="dashboard.html"><i class="fa-solid fa-gauge-high"></i> Admin Dashboard (Demo)</a></li>
           </ul>
         </div>
 
