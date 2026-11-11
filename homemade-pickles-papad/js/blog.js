@@ -81,37 +81,60 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* 2. Blog Details Dynamic Content Loader (blog-details.html?post=...) */
+  /* 2. Blog Articles Dataset (Same-Page Blog Reader + Blog Details Page) */
   var blogArticles = {
+    'sun-cured-mango': {
+      tag: '<i class="fa-solid fa-sun"></i> Editor\'s Choice • Solar Curing',
+      title: 'The Secret Art of Traditional Sun-Cured Raw Mango Pickle',
+      crumb: 'Sun-Cured Raw Mango Pickle',
+      author: 'Parvati Devi',
+      roleDate: 'Head Kitchen Custodian • May 14, 2026 • 6 min read',
+      image: 'assets/images/blog/blog-details-main.jpg',
+      imageAlt: 'Traditional cured raw mango pickle in ceramic martaban',
+      categoryLabel: 'Editor\'s Choice',
+      shortDesc: 'Why electric dehydrators can never replace 21 days of slow summer rooftop sunlight in ceramic barnis.',
+      tags: ['#SunCuredMango', '#CeramicBarni', '#HeritageAchar'],
+      promoTitle: 'Order Sun-Cured Avakaya',
+      promoDesc: '21-day rooftop sun-cured green mangoes steeped in Kachi Ghani mustard oil.',
+      promoBtn: 'Order 500g Jar (₹280)',
+      promoHref: 'product-details.html',
+      bodyHtml:
+        '<p>Long before commercial dehydrators or rapid curing chambers existed, north Indian courtyards awaited the peak May afternoon heat. Fresh Ramkela mangoes harvested before the monsoon are washed in running well water, wiped with bleached muslin cloths, and rested upside down over woven charpois for hours until every trace of sap evaporates.</p>' +
+        '<h3>Why Ceramic Barnis Beat Plastic & Metal Vats</h3>' +
+        '<p>Glazed porcelain martabans absorb afternoon warmth slowly without overheating delicate mango skin. During breezy nights, dense ceramic walls insulate the spice emulsion, coaxing natural tart citric juices out of the fruit to mingle gently with crushed fenugreek and yellow mustard seeds.</p>' +
+        '<blockquote>"Twenty-one sunrises on an open rooftop transform sharp raw sourness into rounded, velvet complexity no machine can imitate in twenty hours."</blockquote>' +
+        '<h3>Wild Lacto-Fermentation Without Starter Cultures</h3>' +
+        '<p>Covered solely with airy starched mull-cloth tied securely around the jar lip, solar UV sanitizes the rim while friendly lactic bacteria cultivate deeper tang inside. By week three, oil rises naturally as a golden mirror seal protecting freshness for two full years without a speck of preservative.</p>'
+    },
     'mango-pickle': {
       tag: '<i class="fa-solid fa-pepper-hot"></i> Traditional Recipe Masterclass',
-      title: 'The Secret Art of Traditional Sun-Cured Raw Mango Pickle',
-      crumb: 'Sun-Cured Mango Pickle',
+      title: 'Traditional Mango Pickle Preparation: The 40-Day Sun Method',
+      crumb: '40-Day Mango Pickle Method',
       author: 'Parvati Devi',
-      roleDate: 'Head Kitchen Custodian • May 14, 2026',
-      image: 'assets/images/blog/blog-details-main.jpg',
-      imageAlt: 'Traditional clay barnis aging raw mango pickle under direct sunlight',
+      roleDate: 'Head Kitchen Custodian • May 14, 2026 • 6 min read',
+      image: 'assets/images/blog/blog-details-step2.jpg',
+      imageAlt: 'Hand-cut green mangoes tossed with roasted spices for 40-day curing',
       categoryLabel: 'Recipes',
       shortDesc: 'Step-by-step ancestral guide to washing, cutting, salting, and curing green Ramkela mangoes in pure cold-pressed oil.',
-      tags: ['#MangoPickle', '#SunFermentation', '#HeritageKitchen'],
+      tags: ['#MangoPickle', '#40DayMethod', '#ColdPressedOil'],
       promoTitle: 'Taste This Heritage Mango Pickle',
       promoDesc: 'Handcrafted using the exact 40-day sun cured method described in this article.',
       promoBtn: 'Order 500g Jar (₹280)',
       promoHref: 'product-details.html',
       bodyHtml:
-        '<p>When summer arrives across northern and central India, the fragrance of pungent cold-pressed mustard oil, cracked fenugreek, and tart green mangoes fills ancestral courtyards. For over three millennia, the subcontinent understood something modern food corporations frequently forget: <em>the finest preservative on Earth is patient, unhurried sunshine.</em></p>' +
-        '<h3>Why Electrical Dehydrators Ruin Authentic Achar</h3>' +
-        '<p>Many industrial pickle factories rush mangoes through hot-air blowers to strip moisture in 90 minutes. But rapid heat breaks down the cellular pectin inside raw mango flesh, turning the pieces mushy within weeks.</p>' +
-        '<p>When mangoes are salted with crushed Sendha Namak and spread upon pristine muslin cloths under open sunlight, the moisture evaporates gradually. As water leaves, the mango absorbs rock salt through slow osmotic pressure, retaining an audible, firm crispness that survives two whole years submerged in oil.</p>' +
-        '<div class="mini-grid-2" style="margin: 2.25rem 0;">' +
-          '<div><div class="blog-step-media"><img src="assets/images/blog/blog-details-step1.jpg" alt="Sun-drying raw green mango slices"></div><span class="blog-step-caption">Step 1: Sun-drying hand-cut Ramkela raw mangoes on clean cloth.</span></div>' +
-          '<div><div class="blog-step-media"><img src="assets/images/blog/blog-details-step2.jpg" alt="Mixing stone-ground spices with mustard oil"></div><span class="blog-step-caption">Step 2: Folding coarse-roasted spices into pure mustard oil.</span></div>' +
+        '<p>When summer arrives across northern and central India, the fragrance of pungent cold-pressed mustard oil, cracked fenugreek, and tart green mangoes fills ancestral courtyards. For over three millennia, households mastered patient, unhurried rooftop curing using strict washing, salting, and spice-roasting ratios.</p>' +
+        '<h3>Step 1: Washing, Cutting & Rock Salt Dehydration</h3>' +
+        '<p>Every raw Ramkela mango is washed clean, wiped Bone-dry, and sliced with a sharp iron sarota. Tossing cut pieces with unrefined mineral rock salt (Sendha Namak) and haldi over sunlit muslin cloths strips excess free water gradually without cooking the cellular crunch.</p>' +
+        '<div class="mini-grid-2" style="margin: 1.75rem 0;">' +
+          '<div><div class="blog-step-media"><img src="assets/images/blog/blog-details-step1.jpg" alt="Sun-drying salted raw green mango slices"></div><span class="blog-step-caption">Day 1: Sun-drying hand-cut green mango quarters after gentle rock salt brining.</span></div>' +
+          '<div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem; display: flex; flex-direction: column; justify-content: center;">' +
+            '<h4 style="margin-bottom: 0.5rem;">Key Ancestral Spice Ratio</h4>' +
+            '<p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0;">For 5kg firm mangoes: 500g Sendha Namak, 200g split rai, 150g coarsely crushed saunf, 100g roasted methi dana, 80g turmeric, and pure smoked Kachi Ghani mustard oil.</p>' +
+          '</div>' +
         '</div>' +
-        '<h3>The Alchemy of Wooden-Churned Kachi Ghani Oil</h3>' +
-        '<p>The oil in a traditional pickle jar is not merely a lubricant—it is a liquid airtight seal. By completely submerging every piece of mango below cold-pressed mustard oil, airborne mold spores and wild fungi cannot access oxygen. Furthermore, cold-pressed mustard oil contains allyl isothiocyanate, a potent natural antimicrobial compound that inhibits spoilage bacteria while nurturing gut-friendly lactobacillus strains.</p>' +
-        '<blockquote>"A true martaban of achar must never be hurried. When you hear the lid tied with twine whistle softly under the afternoon sun, you know the earthen pot is breathing life into the spices."</blockquote>' +
-        '<h3>Porcelain Barnis: The Forgotten Thermodynamic Vessel</h3>' +
-        '<p>In our kitchen at Dadi\'s Swad, metal ladles and plastic containers are strictly prohibited around curing vats. Glazed porcelain martabans insulate the fermenting fruit from sharp nighttime drops in temperature while gently diffusing daytime solar heat. Next time you twist open a jar of Traditional Mango Pickle, you are tasting four decades of ancestral patience.</p>'
+        '<h3>Step 2: Folding Stone-Ground Spices & Kachi Ghani Oil</h3>' +
+        '<p>Coarse-roasted spices cling evenly to dried mango fibers while cooled mustard oil locks out air spores completely. Every alternate morning for 40 days, the wooden ladle turns the batch from bottom to top under bright sun until aroma peaks.</p>' +
+        '<blockquote>"Never skip complete cooling of smoked mustard oil before folding into the spices—hot oil scorches delicate aroma and turns fenugreek bitter."</blockquote>'
     },
     'lemon-pickle': {
       tag: '<i class="fa-solid fa-sun"></i> Zero-Oil Ayurvedic Fermentation',
@@ -284,6 +307,160 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
+  var orderedStorySlugs = [
+    'sun-cured-mango',
+    'mango-pickle',
+    'lemon-pickle',
+    'indian-papad',
+    'food-preservation',
+    'homemade-vs-store',
+    'jar-sterilization',
+    'roasting-papad',
+    'amla-benefits'
+  ];
+
+  function buildTagBadgesHtml(tags) {
+    var tagHtml = '<span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Tags:</span>';
+    tags.forEach(function (t, idx) {
+      var cls = idx === 0 ? 'badge-primary' : (idx === 1 ? 'badge-secondary' : 'badge-accent');
+      tagHtml += ' <span class="badge ' + cls + '">' + t + '</span>';
+    });
+    return tagHtml;
+  }
+
+  function smoothScrollToSection(el) {
+    if (!el) return;
+    var header = document.getElementById('siteHeader');
+    var headerOffset = (header ? header.offsetHeight : 76) + 20;
+    var rect = el.getBoundingClientRect();
+    var targetY = Math.max(0, window.pageYOffset + rect.top - headerOffset);
+    window.scrollTo({ top: targetY, behavior: 'smooth' });
+  }
+
+  /* 2A. Same-Page Inline Blog Reader (blog.html) */
+  var readerSection = document.getElementById('blogReaderSection');
+  var activeInlineSlug = null;
+
+  function clearActiveStoryCards() {
+    document.querySelectorAll('.is-active-story').forEach(function (card) {
+      card.classList.remove('is-active-story');
+    });
+  }
+
+  function openInlineStory(slug, shouldScroll) {
+    if (!readerSection) return;
+    var article = blogArticles[slug];
+    if (!article) return;
+
+    activeInlineSlug = slug;
+
+    var tagEl = document.getElementById('blogReaderTag');
+    var titleEl = document.getElementById('blogReaderTitle');
+    var authorEl = document.getElementById('blogReaderAuthor');
+    var metaEl = document.getElementById('blogReaderMeta');
+    var imgEl = document.getElementById('blogReaderImage');
+    var bodyEl = document.getElementById('blogReaderBody');
+    var tagsWrap = document.getElementById('blogReaderTags');
+    var ctaEl = document.getElementById('blogReaderCta');
+    var prevBtn = document.getElementById('blogReaderPrevBtn');
+    var nextBtn = document.getElementById('blogReaderNextBtn');
+
+    if (tagEl) tagEl.innerHTML = article.tag;
+    if (titleEl) titleEl.textContent = article.title;
+    if (authorEl) authorEl.textContent = article.author;
+    if (metaEl) metaEl.textContent = article.roleDate;
+    if (imgEl) {
+      imgEl.src = article.image;
+      imgEl.alt = article.imageAlt;
+    }
+    if (bodyEl) bodyEl.innerHTML = article.bodyHtml;
+    if (tagsWrap) tagsWrap.innerHTML = buildTagBadgesHtml(article.tags);
+    if (ctaEl) {
+      ctaEl.textContent = article.promoBtn;
+      ctaEl.href = article.promoHref;
+    }
+
+    var currentIndex = orderedStorySlugs.indexOf(slug);
+    var prevSlug = orderedStorySlugs[(currentIndex - 1 + orderedStorySlugs.length) % orderedStorySlugs.length];
+    var nextSlug = orderedStorySlugs[(currentIndex + 1) % orderedStorySlugs.length];
+    if (prevBtn) {
+      prevBtn.setAttribute('data-target-slug', prevSlug);
+      var prevLabel = prevBtn.querySelector('span');
+      if (prevLabel) prevLabel.textContent = 'Previous Story';
+    }
+    if (nextBtn) {
+      nextBtn.setAttribute('data-target-slug', nextSlug);
+      var nextLabel = nextBtn.querySelector('span');
+      if (nextLabel) nextLabel.textContent = 'Next Story';
+    }
+
+    clearActiveStoryCards();
+    if (slug === 'sun-cured-mango') {
+      var featuredCard = document.querySelector('#featuredArticle .featured-article-card');
+      if (featuredCard) featuredCard.classList.add('is-active-story');
+    } else {
+      var matchingCard = document.querySelector('[data-post-slug="' + slug + '"]');
+      if (matchingCard) matchingCard.classList.add('is-active-story');
+    }
+
+    readerSection.removeAttribute('hidden');
+
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, '', '?post=' + encodeURIComponent(slug) + '#blogReaderSection');
+    }
+
+    if (shouldScroll) {
+      window.requestAnimationFrame(function () {
+        smoothScrollToSection(readerSection);
+      });
+    }
+  }
+
+  if (readerSection) {
+    document.querySelectorAll('[data-blog-post]').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        var slug = trigger.getAttribute('data-blog-post');
+        if (!slug || !blogArticles[slug]) return;
+        e.preventDefault();
+        openInlineStory(slug, true);
+      });
+    });
+
+    var closeReaderBtn = document.getElementById('blogReaderCloseBtn');
+    if (closeReaderBtn) {
+      closeReaderBtn.addEventListener('click', function () {
+        readerSection.setAttribute('hidden', '');
+        clearActiveStoryCards();
+        activeInlineSlug = null;
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', 'blog.html');
+        }
+        smoothScrollToSection(document.getElementById('latestArticles') || document.getElementById('featuredArticle'));
+      });
+    }
+
+    var prevStoryBtn = document.getElementById('blogReaderPrevBtn');
+    var nextStoryBtn = document.getElementById('blogReaderNextBtn');
+    [prevStoryBtn, nextStoryBtn].forEach(function (navBtn) {
+      if (!navBtn) return;
+      navBtn.addEventListener('click', function () {
+        var nextSlug = navBtn.getAttribute('data-target-slug');
+        if (nextSlug && blogArticles[nextSlug]) {
+          openInlineStory(nextSlug, true);
+        }
+      });
+    });
+
+    var initialPostParam = urlParams.get('post');
+    if (initialPostParam && blogArticles[initialPostParam]) {
+      openInlineStory(initialPostParam, false);
+      window.setTimeout(function () {
+        smoothScrollToSection(readerSection);
+      }, 100);
+    }
+  }
+
+  /* 2B. Blog Details Page Dynamic Loader (blog-details.html?post=...) */
   var articleTitleEl = document.getElementById('blogDetailTitle');
   if (articleTitleEl) {
     var postSlug = urlParams.get('post') || 'mango-pickle';
@@ -313,14 +490,7 @@ document.addEventListener('DOMContentLoaded', function () {
       imgEl.alt = article.imageAlt;
     }
     if (bodyEl) bodyEl.innerHTML = article.bodyHtml;
-    if (tagsWrap) {
-      var tagHtml = '<span style="font-size: 0.85rem; font-weight: 700; color: var(--text-muted);">Tags:</span>';
-      article.tags.forEach(function (t, idx) {
-        var cls = idx === 0 ? 'badge-primary' : (idx === 1 ? 'badge-secondary' : 'badge-accent');
-        tagHtml += ' <span class="badge ' + cls + '">' + t + '</span>';
-      });
-      tagsWrap.innerHTML = tagHtml;
-    }
+    if (tagsWrap) tagsWrap.innerHTML = buildTagBadgesHtml(article.tags);
     if (promoTitle) promoTitle.textContent = article.promoTitle;
     if (promoDesc) promoDesc.textContent = article.promoDesc;
     if (promoBtn) {
@@ -331,7 +501,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update Related Articles dynamically so none duplicate the current post!
     var relatedGrid = document.getElementById('relatedBlogGrid');
     if (relatedGrid) {
-      var allSlugs = ['mango-pickle', 'lemon-pickle', 'indian-papad', 'food-preservation', 'homemade-vs-store', 'jar-sterilization', 'roasting-papad', 'amla-benefits'];
+      var allSlugs = orderedStorySlugs;
       var otherSlugs = allSlugs.filter(function (s) { return s !== postSlug; }).slice(0, 3);
       var relatedImages = [
         'assets/images/blog/blog-related-1.jpg',

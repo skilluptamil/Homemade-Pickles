@@ -224,3 +224,8 @@
   }
 }
 
+
+[dir="rtl"] .blog-reader-title,
+[dir="rtl"] .blog-reader-meta {
+  text-align: right;
+}
