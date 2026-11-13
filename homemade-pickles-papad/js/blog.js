@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       crumb: 'Sun-Cured Raw Mango Pickle',
       author: 'Parvati Devi',
       roleDate: 'Head Kitchen Custodian • May 14, 2026 • 6 min read',
-      image: 'assets/images/blog/blog-details-main.jpg',
+      image: 'assets/images/blog/blog-featured.jpg',
       imageAlt: 'Traditional cured raw mango pickle in ceramic martaban',
       categoryLabel: 'Editor\'s Choice',
       shortDesc: 'Why electric dehydrators can never replace 21 days of slow summer rooftop sunlight in ceramic barnis.',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
       promoTitle: 'Order Sun-Cured Avakaya',
       promoDesc: '21-day rooftop sun-cured green mangoes steeped in Kachi Ghani mustard oil.',
       promoBtn: 'Order 500g Jar (₹280)',
-      promoHref: 'product-details.html',
+      promoHref: 'product-details.html?product=mango-pickle',
       bodyHtml:
         '<p>Long before commercial dehydrators or rapid curing chambers existed, north Indian courtyards awaited the peak May afternoon heat. Fresh Ramkela mangoes harvested before the monsoon are washed in running well water, wiped with bleached muslin cloths, and rested upside down over woven charpois for hours until every trace of sap evaporates.</p>' +
         '<h3>Why Ceramic Barnis Beat Plastic & Metal Vats</h3>' +
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
       crumb: '40-Day Mango Pickle Method',
       author: 'Parvati Devi',
       roleDate: 'Head Kitchen Custodian • May 14, 2026 • 6 min read',
-      image: 'assets/images/blog/blog-details-step2.jpg',
+      image: 'assets/images/blog/blog-1.jpg',
       imageAlt: 'Hand-cut green mangoes tossed with roasted spices for 40-day curing',
       categoryLabel: 'Recipes',
       shortDesc: 'Step-by-step ancestral guide to washing, cutting, salting, and curing green Ramkela mangoes in pure cold-pressed oil.',
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
       promoTitle: 'Taste This Heritage Mango Pickle',
       promoDesc: 'Handcrafted using the exact 40-day sun cured method described in this article.',
       promoBtn: 'Order 500g Jar (₹280)',
-      promoHref: 'product-details.html',
+      promoHref: 'product-details.html?product=mango-pickle',
       bodyHtml:
         '<p>When summer arrives across northern and central India, the fragrance of pungent cold-pressed mustard oil, cracked fenugreek, and tart green mangoes fills ancestral courtyards. For over three millennia, households mastered patient, unhurried rooftop curing using strict washing, salting, and spice-roasting ratios.</p>' +
         '<h3>Step 1: Washing, Cutting & Rock Salt Dehydration</h3>' +
@@ -137,12 +137,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<blockquote>"Never skip complete cooling of smoked mustard oil before folding into the spices—hot oil scorches delicate aroma and turns fenugreek bitter."</blockquote>'
     },
     'lemon-pickle': {
-      tag: '<i class="fa-solid fa-sun"></i> Zero-Oil Ayurvedic Fermentation',
+      tag: '<i class="fa-solid fa-lemon"></i> Zero-Oil Health Recipe',
       title: 'Homemade Lemon Pickle: The Zero-Oil Sun Fermentation Wonder',
       crumb: 'Zero-Oil Lemon Pickle',
-      author: 'Parvati Devi',
-      roleDate: 'Head Kitchen Custodian • Apr 28, 2026',
-      image: 'assets/images/blog/detail-lemon.jpg',
+      author: 'Kamla Ben',
+      roleDate: 'Citrus Fermentation Specialist • Apr 28, 2026 • 5 min read',
+      image: 'assets/images/blog/blog-2.jpg',
       imageAlt: 'Traditional homemade sun-cured Indian lemon pickle seasoned in spices',
       categoryLabel: 'Recipes',
       shortDesc: 'How black salt, roasted ajwain, and pure sun rays transform tart Kagzi lemons into a medicinal, gut-friendly relish.',
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
       promoTitle: 'Try Zero-Oil Nimbu Achar',
       promoDesc: '40-day sun fermented Kagzi lemons with black salt, roasted ajwain, and natural jaggery.',
       promoBtn: 'View Lemon Pickle (₹260)',
-      promoHref: 'products.html?cat=pickles',
+      promoHref: 'product-details.html?product=lemon-pickle',
       bodyHtml:
         '<p>Unlike oil-sealed mango pickles, the quintessential North Indian <em>Nimbu Ka Achar</em> requires not a single drop of oil. All it demands is thin-skinned, juice-laden Kagzi lemons, mineral-rich black salt (kala namak), roasted carom seeds (ajwain), and forty unhurried days under bright afternoon sun.</p>' +
         '<h3>Choosing Thin-Skinned Kagzi Lemons</h3>' +
@@ -162,12 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<p>While Rajasthani homes prefer adding crushed organic jaggery (gud) during the third week to craft <em>Khatta Meetha Nimbu</em>, Gujarati and Punjabi kitchens toss in split fenugreek, asafoetida, and vibrant Kashmiri chilli powder. Whichever profile you love, patient solar curing guarantees zero artificial vinegar and gentle digestibility for every age group.</p>'
     },
     'indian-papad': {
-      tag: '<i class="fa-solid fa-cookie-bite"></i> Culinary Craft & Regional Heritage',
+      tag: '<i class="fa-solid fa-cookie"></i> Heritage Food Exploration',
       title: 'Different Types of Indian Papad: From Amritsari Urad to Kerala Appalam',
-      crumb: 'Types of Indian Papad',
-      author: 'Sunita Sharma',
-      roleDate: 'Master Papad Artisan • Apr 12, 2026',
-      image: 'assets/images/blog/detail-papad.jpg',
+      crumb: 'Indian Papad Varieties',
+      author: 'Meenakshi Sundaram',
+      roleDate: 'Artisan Dough & Dehydration Master • Apr 12, 2026 • 7 min read',
+      image: 'assets/images/blog/blog-3.jpg',
       imageAlt: 'Assorted crisp roasted Indian papads served with traditional accompaniments',
       categoryLabel: 'Papad Craft',
       shortDesc: 'A deep cultural exploration of regional papad varieties, spices kneaded into the dough, and roasting vs frying advice.',
@@ -187,12 +187,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<p>Served upon banana leaves during Kerala Onam Sadhyas and Tamil wedding feasts, true Appalam uses fine double-milled urad flour kneaded in pure gingelly (sesame) oil. Unlike spicy northern papads, appalam puffs gently into airy, mildly salted golden domes when slipped into hot sesame oil or dry-crisped over an iron tawa.</p>'
     },
     'food-preservation': {
-      tag: '<i class="fa-solid fa-seedling"></i> Ancestral Preservation Science',
+      tag: '<i class="fa-solid fa-shield-halved"></i> Ancient Food Science',
       title: 'Traditional Food Preservation: Ancient Science Without Synthetic Additives',
-      crumb: 'Food Preservation Secrets',
-      author: 'Ramesh Chandra',
-      roleDate: 'Quality & Ingredients Head • Mar 24, 2026',
-      image: 'assets/images/blog/detail-preservation.jpg',
+      crumb: 'Preservation Science',
+      author: 'Dr. Alok Nath',
+      roleDate: 'Food Historian & Advisory Member • Mar 29, 2026 • 8 min read',
+      image: 'assets/images/blog/blog-4.jpg',
       imageAlt: 'Vibrant whole Indian spices and natural pickling botanicals',
       categoryLabel: 'Preservation',
       shortDesc: 'Understanding how unrefined rock salt, cold-pressed mustard oil, and phenolic spice compounds create natural preservation barrier.',
@@ -212,12 +212,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<p>Pouring pure cold-pressed mustard or gingelly oil half an inch above the settled pickle layer seals out ambient oxygen entirely—creating an anaerobic chamber where friendly lactobacillus slowly tenderizes fibers and deepens flavor month after month.</p>'
     },
     'homemade-vs-store': {
-      tag: '<i class="fa-solid fa-heart-pulse"></i> Nutrition & Consumer Awareness',
+      tag: '<i class="fa-solid fa-scale-balanced"></i> Pure Food Consumer Guide',
       title: 'Homemade Pickles vs Store-Bought: The Hidden Vinegar & Preservatives',
-      crumb: 'Homemade vs Store-Bought',
+      crumb: 'Homemade vs Commercial',
       author: 'Parvati Devi',
-      roleDate: 'Head Kitchen Custodian • Mar 08, 2026',
-      image: 'assets/images/blog/detail-comparison.jpg',
+      roleDate: 'Head Kitchen Custodian • Mar 15, 2026 • 5 min read',
+      image: 'assets/images/blog/blog-5.jpg',
       imageAlt: 'Authentic small-batch Indian pickles prepared with natural spices',
       categoryLabel: 'Health',
       shortDesc: 'Why commercial supermarket pickles cause acidity, and why grandmother\'s lacto-fermented achar supports healthy digestion.',
@@ -237,12 +237,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<p>Check for rich amber-gold mustard oil sediment at the base, visible whole cracked fenugreek and fennel seeds, firm fruit edges rather than bleached mush, and a warm, nutty roasted aroma the moment you twist the lid.</p>'
     },
     'jar-sterilization': {
-      tag: '<i class="fa-solid fa-spray-can-sparkles"></i> Kitchen Hygiene Guide',
+      tag: '<i class="fa-solid fa-bottle-droplet"></i> Clean Kitchen Protocol',
       title: 'How to Sterilize Glass & Ceramic Barni Jars with Dry Steam',
-      crumb: 'Sterilizing Pickle Jars',
-      author: 'Sunita Sharma',
-      roleDate: 'Kitchen Hygiene Lead • Apr 19, 2026',
-      image: 'assets/images/blog/detail-jar-steam.jpg',
+      crumb: 'Jar Sterilization Guide',
+      author: 'Kamla Ben',
+      roleDate: 'Hygiene & Cleanroom Lead • Feb 24, 2026 • 4 min read',
+      image: 'assets/images/blog/blog-sidebar-1.jpg',
       imageAlt: 'Clean sterilized glass jars prepared for homemade pickle storage',
       categoryLabel: 'Pickling Tip',
       shortDesc: 'Prevent white surface mold and ensure 12+ months of safe shelf-life using grandma\'s hot water steam & hing-smoke method.',
@@ -260,12 +260,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<blockquote>"Always use a dry, stainless steel or wooden spoon dedicated solely to the pickle jar—never dip a wet curry spoon inside."</blockquote>'
     },
     'roasting-papad': {
-      tag: '<i class="fa-solid fa-fire"></i> Papad Roasting Guide',
+      tag: '<i class="fa-solid fa-fire-burner"></i> Culinary Technique',
       title: 'Microwave vs Open Flame Tawa Roasting: Achieving Zero-Oil Crunch',
-      crumb: 'Roasting Papads Properly',
-      author: 'Sunita Sharma',
-      roleDate: 'Master Papad Artisan • Apr 05, 2026',
-      image: 'assets/images/blog/detail-tawa-papad.jpg',
+      crumb: 'Papad Roasting Mastery',
+      author: 'Meenakshi Sundaram',
+      roleDate: 'Artisan Dough & Dehydration Master • Feb 10, 2026 • 4 min read',
+      image: 'assets/images/blog/blog-sidebar-2.jpg',
       imageAlt: 'Crisp dry roasted Indian papads ready to serve',
       categoryLabel: 'Papad Craft',
       shortDesc: 'Side-by-side comparison of open gas flame roasting, heavy cast-iron tawa pressing, and quick microwave puffing.',
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
       promoTitle: 'No Soda Bicarbonate Aftertaste',
       promoDesc: 'Taste crisp handmade urad & pepper papads crafted strictly with natural herbs.',
       promoBtn: 'Browse Papad Varieties',
-      promoHref: 'products.html?cat=papads',
+      promoHref: 'product-details.html?product=rice-papad',
       bodyHtml:
         '<p>Whether you want to enjoy your papad with zero added oil or keep its delicate edges crisp without burnt spots, roasting technique makes every difference—especially between urad lentil papads and steamed rice khichiyas.</p>' +
         '<h3>1. Cast-Iron Tawa Cloth Pressing (Best Texture)</h3>' +
@@ -283,12 +283,12 @@ document.addEventListener('DOMContentLoaded', function () {
         '<blockquote>"For Rice Khichiya papads, microwave puffing for 35 seconds with a light brush of mustard oil makes them double in crispness effortlessly."</blockquote>'
     },
     'amla-benefits': {
-      tag: '<i class="fa-solid fa-heart-circle-check"></i> Ayurvedic Kitchen Wisdom',
+      tag: '<i class="fa-solid fa-heart-pulse"></i> Ayurvedic Nutrition',
       title: 'Why Indian Meals End with Amla Achar & Digestive Spices',
-      crumb: 'Benefits of Amla Achar',
-      author: 'Parvati Devi',
-      roleDate: 'Head Kitchen Custodian • Mar 18, 2026',
-      image: 'assets/images/blog/detail-amla.jpg',
+      crumb: 'Amla Ayurvedic Benefits',
+      author: 'Vaidya Harishankar',
+      roleDate: 'Traditional Ayurvedic Practitioner • Jan 28, 2026 • 6 min read',
+      image: 'assets/images/blog/blog-sidebar-3.jpg',
       imageAlt: 'Spiced Indian gooseberry amla pickle cured in traditional spices',
       categoryLabel: 'Health',
       shortDesc: 'How vitamin-C dense Indian gooseberry cured with turmeric and split fenugreek stimulates digestive enzymes naturally.',
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
       promoTitle: 'Winter Immunity In Every Jar',
       promoDesc: 'Try our small-batch Gooseberry (Amla) Pickle tempered with organic turmeric and methi.',
       promoBtn: 'Order Amla Pickle (₹290)',
-      promoHref: 'products.html?cat=pickles',
+      promoHref: 'product-details.html?product=amla-pickle',
       bodyHtml:
         '<p>Across classical Ayurveda, the six primary tastes (<em>Shad Rasa</em>) work together to complete satiety after a meal. While sweet, salty, and heavy savory courses fill the stomach, tart and astringent <em>Amla</em> (Indian Gooseberry) awakens salivary enzymes and prevents afternoon lethargy.</p>' +
         '<h3>Why Pickled Amla Retains High Vitamin C</h3>' +
@@ -418,6 +418,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (readerSection) {
     document.querySelectorAll('[data-blog-post]').forEach(function (trigger) {
+      var href = trigger.getAttribute('href') || '';
+      // If link navigates to blog-details.html, allow natural browser navigation!
+      if (href.indexOf('blog-details.html') !== -1) return;
       trigger.addEventListener('click', function (e) {
         var slug = trigger.getAttribute('data-blog-post');
         if (!slug || !blogArticles[slug]) return;
@@ -463,9 +466,9 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 2B. Blog Details Page Dynamic Loader (blog-details.html?post=...) */
   var articleTitleEl = document.getElementById('blogDetailTitle');
   if (articleTitleEl) {
-    var postSlug = urlParams.get('post') || 'mango-pickle';
-    var article = blogArticles[postSlug] || blogArticles['mango-pickle'];
-    if (!blogArticles[postSlug]) postSlug = 'mango-pickle';
+    var postSlug = urlParams.get('post') || 'sun-cured-mango';
+    var article = blogArticles[postSlug] || blogArticles['sun-cured-mango'];
+    if (!blogArticles[postSlug]) postSlug = 'sun-cured-mango';
 
     document.title = article.title + " | Dadi's Swad Culinary Journal";
 
@@ -473,6 +476,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var crumbEl = document.getElementById('blogDetailCrumb');
     var authorEl = document.getElementById('blogDetailAuthor');
     var metaEl = document.getElementById('blogDetailMeta');
+    var headingImg = document.getElementById('blogHeadingImage');
+    var leadDesc = document.getElementById('blogDetailDesc');
     var imgEl = document.getElementById('blogDetailImage');
     var bodyEl = document.getElementById('blogArticleBody');
     var tagsWrap = document.getElementById('blogDetailTags');
@@ -485,10 +490,18 @@ document.addEventListener('DOMContentLoaded', function () {
     if (crumbEl) crumbEl.textContent = article.crumb;
     if (authorEl) authorEl.textContent = article.author;
     if (metaEl) metaEl.textContent = article.roleDate;
+    if (leadDesc) leadDesc.textContent = article.shortDesc;
+
+    // Both heading visual and main article image display the EXACT SAME card image
+    if (headingImg) {
+      headingImg.src = article.image;
+      headingImg.alt = article.imageAlt || article.title;
+    }
     if (imgEl) {
       imgEl.src = article.image;
-      imgEl.alt = article.imageAlt;
+      imgEl.alt = article.imageAlt || article.title;
     }
+
     if (bodyEl) bodyEl.innerHTML = article.bodyHtml;
     if (tagsWrap) tagsWrap.innerHTML = buildTagBadgesHtml(article.tags);
     if (promoTitle) promoTitle.textContent = article.promoTitle;
@@ -498,25 +511,21 @@ document.addEventListener('DOMContentLoaded', function () {
       promoBtn.href = article.promoHref;
     }
 
-    // Update Related Articles dynamically so none duplicate the current post!
+    // Update Related Articles dynamically with authentic matching images and titles
     var relatedGrid = document.getElementById('relatedBlogGrid');
     if (relatedGrid) {
-      var allSlugs = orderedStorySlugs;
+      var allSlugs = ['sun-cured-mango', 'mango-pickle', 'lemon-pickle', 'indian-papad', 'food-preservation', 'homemade-vs-store'];
       var otherSlugs = allSlugs.filter(function (s) { return s !== postSlug; }).slice(0, 3);
-      var relatedImages = [
-        'assets/images/blog/blog-related-1.jpg',
-        'assets/images/blog/blog-related-2.jpg',
-        'assets/images/blog/blog-related-3.jpg'
-      ];
       var relHtml = '';
-      otherSlugs.forEach(function (slug, index) {
+      otherSlugs.forEach(function (slug) {
         var rel = blogArticles[slug];
+        if (!rel) return;
         relHtml +=
           '<article class="blog-card">' +
-            '<div class="blog-media">' +
+            '<a href="blog-details.html?post=' + slug + '" class="blog-media" style="display: block; overflow: hidden; height: 200px;">' +
               '<span class="blog-badge">' + rel.categoryLabel + '</span>' +
-              '<img src="' + relatedImages[index] + '" alt="' + rel.imageAlt + '" loading="lazy">' +
-            '</div>' +
+              '<img src="' + rel.image + '" alt="' + (rel.imageAlt || rel.title) + '" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">' +
+            '</a>' +
             '<div class="blog-content">' +
               '<h3 class="blog-title"><a href="blog-details.html?post=' + slug + '">' + rel.title + '</a></h3>' +
               '<p class="blog-desc">' + rel.shortDesc + '</p>' +
@@ -526,17 +535,17 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       relatedGrid.innerHTML = relHtml;
     }
-  }
 
-  /* Sidebar Search on blog-details.html redirects cleanly to filtered blog.html */
-  var sidebarSearchForm = document.getElementById('blogSidebarSearchForm');
-  if (sidebarSearchForm) {
-    sidebarSearchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var inp = sidebarSearchForm.querySelector('input');
-      var q = inp ? inp.value.trim() : '';
-      window.location.href = q ? ('blog.html?q=' + encodeURIComponent(q)) : 'blog.html';
-    });
+    /* Sidebar Search on blog-details.html redirects cleanly to filtered blog.html */
+    var sidebarSearchForm = document.getElementById('blogSidebarSearchForm');
+    var sidebarSearchInput = document.getElementById('blogSidebarSearchInput');
+    if (sidebarSearchForm && sidebarSearchInput) {
+      sidebarSearchForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var q = sidebarSearchInput.value.trim();
+        window.location.href = 'blog.html?q=' + encodeURIComponent(q);
+      });
+    }
   }
 
   /* 3. Social Sharing Functionality (on blog-details.html) */
@@ -606,4 +615,14 @@ document.addEventListener('DOMContentLoaded', function () {
       emailInput.value = '';
     });
   }
+
+  // Smooth scroll for footer blog link when already on blog.html
+  document.querySelectorAll('.footer-links a[href="blog.html"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (window.location.pathname.includes('blog.html')) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
 });

@@ -83,10 +83,10 @@
        ========================================================================== -->
   <section class="page-hero" id="serviceDetailHero">
     <div class="container">
-      <span class="section-tag"><i class="fa-solid fa-mortar-pestle"></i> Bespoke Culinary Service</span>
-      <h1 class="section-title">Custom Pickle Preparation &amp; Private Labeling</h1>
+      <span class="section-tag" id="serviceHeroTag"><i class="fa-solid fa-jar"></i> Signature Service 01</span>
+      <h1 class="section-title" id="serviceHeroTitle"><a href="services.html">Small-Batch Artisanal Pickle Preparation</a></h1>
       <div class="ornament"><i class="fa-solid fa-sliders ornament-icon"></i></div>
-      <p class="section-desc">
+      <p class="section-desc" id="serviceHeroDesc">
         Tailor-made traditional formulations, personalized oil and spice ratios, and FSSAI-compliant commercial packing.
       </p>
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -94,7 +94,7 @@
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
         <a href="services.html">Services</a>
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="breadcrumb-current">Custom Preparation Details</span>
+        <span class="breadcrumb-current" id="serviceBreadcrumbCurrent">Small-Batch Artisanal Pickle Preparation</span>
       </nav>
     </div>
   </section>
@@ -107,27 +107,29 @@
       <div class="hero-grid split-grid-wide-right">
         <div class="hero-visual">
           <div class="hero-image-wrapper" style="border-radius: var(--radius-xl);">
-            <img src="assets/images/services/service-details-hero.jpg" alt="Artisan cook crafting traditional food in kitchen" width="500" height="420" loading="eager">
+            <img id="serviceMainImage" src="assets/images/services/service-pickle-prep.jpg" alt="Artisanal preparation of pickles with wooden ladles in traditional kitchen" width="500" height="420" loading="eager">
           </div>
         </div>
 
         <div>
-          <span class="section-tag"><i class="fa-solid fa-list-check"></i> Service Scope</span>
-          <h2 class="section-title">Bespoke Small-Batch Pickle Crafting</h2>
+          <span class="section-tag" id="serviceScopeTag"><i class="fa-solid fa-list-check"></i> Bespoke Culinary Scope</span>
+          <h2 class="section-title" id="serviceOverviewTitle"><a href="#serviceOverview">Bespoke Small-Batch Pickle Crafting</a></h2>
           <div class="ornament" style="margin: 0.5rem 0 1.5rem 0; justify-content: flex-start;">
             <i class="fa-solid fa-jar ornament-icon"></i>
           </div>
-          <p class="section-desc" style="margin-bottom: 1.25rem;">
-            Every family and commercial dining concept carries a unique taste preference. Our custom preparation service invites caterers, restaurateurs, and families to co-create batches tailored to regional palate profiles.
-          </p>
-          <p class="section-desc" style="margin-bottom: 2rem;">
-            Whether you require an Andhra-style fiery Avakaya with unrefined gingelly oil, a North Indian spicy stuffed red mirch with dry mango amchur, or a mild zero-oil sun-cured sweet-and-tangy lemon pickle, we calibrate the recipe, salt levels, and mustard strength to your exact palate.
-          </p>
+          <div id="serviceOverviewDesc">
+            <p class="section-desc" style="margin-bottom: 1.25rem;">
+              We offer bespoke small-batch preparation of authentic Indian pickles following traditional heirloom regional methods. Whether you need a North Indian mustard-heavy mango achar, a fiery Andhra Avakaya, or a Gujarati sweet-and-sour chundo, our master artisans craft each batch under authentic conditions.
+            </p>
+            <p class="section-desc" style="margin-bottom: 2rem;">
+              Produce is hand-selected from vetted regional farmers, sun-dried on hygienic muslin beds, and steeped in cold-pressed mustard, sesame, or groundnut oil. We ferment slowly in large earthen Bharani jars under direct sunlight, ensuring authentic probiotic richness and traditional taste without synthetic preservatives.
+            </p>
+          </div>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="contact.html#order-enquiry" class="btn btn-primary btn-lg">
+            <button type="button" class="btn btn-primary btn-lg btn-open-service-modal" id="ctaRequestCustomBatch" data-service-name="Small-Batch Artisanal Pickle Preparation" data-package-name="Bespoke Order">
               <i class="fa-solid fa-hand-holding-dollar"></i> Request Custom Batch
-            </a>
+            </button>
             <a href="#servicePricing" class="btn btn-outline btn-lg">
               <i class="fa-solid fa-table"></i> View Package Tiers
             </a>
@@ -144,42 +146,38 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Five-Stage Workflow</span>
-        <h2 class="section-title">How Your Custom Batch is Crafted</h2>
+        <h2 class="section-title" id="serviceProcessTitle"><a href="#serviceProcess">How Your Custom Batch is Crafted</a></h2>
         <div class="ornament"><i class="fa-solid fa-arrow-progress ornament-icon"></i></div>
-        <p class="section-desc">
+        <p class="section-desc" id="serviceProcessDesc">
           From recipe consultation to solar aging and tamper-proof delivery.
         </p>
       </div>
 
-      <div class="process-grid-5">
+      <div class="process-grid-5" id="serviceProcessGrid">
         <div class="feature-card" style="padding: 1.75rem 1.25rem;">
           <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 1rem auto;">1</div>
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Consultation</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">We discuss your target regional profile, oil preference, salt content, and volume.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;"><a href="#serviceEnquiry">Consultation</a></h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; text-align: center;">Discuss your target regional profile, oil preference, salt content, and batch volume.</p>
         </div>
-
         <div class="feature-card" style="padding: 1.75rem 1.25rem;">
           <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 1rem auto;">2</div>
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Sample Tasting</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">We dispatch a pilot test sampler jar to finalize spices and acidity before bulk curing.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;"><a href="#serviceEnquiry">Sample Tasting</a></h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; text-align: center;">We dispatch a pilot test sampler jar to finalize spices and acidity before bulk curing.</p>
         </div>
-
         <div class="feature-card" style="padding: 1.75rem 1.25rem;">
           <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 1rem auto;">3</div>
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Solar Curing</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Produce is hand-cut, stone-pounded, and sun-aged in dedicated ceramic martabans.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;"><a href="blog-details.html?post=sun-cured-mango">Solar Curing</a></h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; text-align: center;">Produce is hand-cut, stone-pounded, and sun-aged in dedicated ceramic martabans.</p>
         </div>
-
         <div class="feature-card" style="padding: 1.75rem 1.25rem;">
           <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 1rem auto;">4</div>
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Hygienic Jarring</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Packed in steam-sterilized glass jars or food-grade bulk drums with custom labels.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;"><a href="blog-details.html?post=jar-sterilization">Hygienic Jarring</a></h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; text-align: center;">Packed in steam-sterilized glass jars or food-grade bulk drums with custom labels.</p>
         </div>
-
         <div class="feature-card" style="padding: 1.75rem 1.25rem;">
           <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--secondary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 1rem auto;">5</div>
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Safe Dispatch</h4>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Cushioned freight dispatch with express courier tracking directly to your kitchen.</p>
+          <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; text-align: center;"><a href="#serviceEnquiry">Safe Dispatch</a></h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; text-align: center;">Cushioned freight dispatch with express courier tracking directly to your kitchen.</p>
         </div>
       </div>
     </div>
@@ -192,27 +190,33 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-star"></i> Tangible Advantages</span>
-        <h2 class="section-title">Features &amp; Commercial Benefits</h2>
+        <h2 class="section-title"><a href="#serviceBenefits">Features &amp; Commercial Benefits</a></h2>
         <div class="ornament"><i class="fa-solid fa-gem ornament-icon"></i></div>
       </div>
 
-      <div class="features-grid">
+      <div class="features-grid" id="serviceFeaturesGrid">
         <div class="feature-card">
           <div class="feature-icon-wrapper"><i class="fa-solid fa-lock"></i></div>
-          <h3 class="feature-title">Exclusive Proprietary Recipes</h3>
+          <h3 class="feature-title"><a href="about.html#philosophy">Exclusive Proprietary Recipes</a></h3>
           <p class="feature-desc">Your custom blended recipe remains confidential and exclusively reserved for your brand or restaurant establishment.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon-wrapper"><i class="fa-solid fa-tag"></i></div>
-          <h3 class="feature-title">Private Label Ready</h3>
-          <p class="feature-desc">Complete support for your personalized logos, nutritional facts labels, FSSAI compliance printing, and barcode tagging.</p>
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-sun"></i></div>
+          <h3 class="feature-title"><a href="blog-details.html?post=sun-cured-mango">100% Traditional Sun-Matured</a></h3>
+          <p class="feature-desc">Never chemically accelerated or pasteurized with artificial acids. Naturally cured in glazed ceramic Bharani vessels.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon-wrapper"><i class="fa-solid fa-cubes"></i></div>
-          <h3 class="feature-title">Flexible Minimum Orders</h3>
-          <p class="feature-desc">Start small with pilot batches of 25kg or scale up to multi-ton seasonal harvests with consistent supply assurances.</p>
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="feature-title"><a href="about.html#certifications">FSSAI Certified Commercial Lab</a></h3>
+          <p class="feature-desc">Standardized microbial testing, batch tracking, zero food adulteration, and certified nutritional analysis.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper"><i class="fa-solid fa-tags"></i></div>
+          <h3 class="feature-title"><a href="service-details.html?service=packaging">White-Label Branding &amp; Barcoding</a></h3>
+          <p class="feature-desc">Delivered jarred with your restaurant logos, custom tamper seals, nutrition panels, and GS1 barcode integration.</p>
         </div>
       </div>
     </div>
@@ -225,67 +229,84 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-tags"></i> Transparent Packages</span>
-        <h2 class="section-title">Service Preparation Packages</h2>
+        <h2 class="section-title"><a href="#servicePackages">Service Preparation Packages</a></h2>
         <div class="ornament"><i class="fa-solid fa-calculator ornament-icon"></i></div>
         <p class="section-desc">
-          Demonstration pricing for commercial small-batch custom preparation and private labeling.
+          Demonstration pricing tiers for custom batch manufacturing and culinary formulation.
         </p>
       </div>
 
-      <div class="pricing-grid">
-        <!-- Starter Tier -->
+      <div class="pricing-grid" id="servicePricingGrid">
         <div class="pricing-card">
+          <span class="pricing-badge">STARTER BATCH</span>
           <div class="pricing-header">
-            <span class="pricing-category">Starter Batch</span>
-            <h3 class="pricing-title">Artisan Pilot</h3>
-            <div class="pricing-price">₹4,500 <span>/ 20kg</span></div>
-            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.35rem;">(Demonstration Rate)</p>
+            <h3 class="pricing-title"><a href="#serviceEnquiry">Boutique Heritage</a></h3>
+            <p class="pricing-subtitle">For gourmet delis &amp; family reunions</p>
+            <div class="pricing-price">
+              <span class="currency">₹7,500</span>
+              <span class="period">/ 25 kg minimum</span>
+            </div>
           </div>
-          <div class="pricing-features">
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> 1 Custom Recipe Formulation</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Choice of Mustard or Til Oil</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Packed in 40x 500g Glass Jars</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Standard Dadi's Swad Quality Seal</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-xmark" style="color: var(--text-muted);"></i> Custom Label Printing</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Single regional recipe curation</li>
+            <li><i class="fa-solid fa-check"></i> Choice of Kachi Ghani or Til oil</li>
+            <li><i class="fa-solid fa-check"></i> 250g or 500g glass jar bottling</li>
+            <li><i class="fa-solid fa-check"></i> Custom printed batch labels</li>
+            <li><i class="fa-solid fa-check"></i> 14-day production cycle</li>
+          </ul>
+          <div class="pricing-cta">
+            <button type="button" class="btn btn-outline btn-open-service-modal" style="width: 100%;" data-service-name="Small-Batch Artisanal Pickle Preparation" data-package-name="Boutique Heritage">
+              <i class="fa-solid fa-paper-plane"></i> Select Starter Batch
+            </button>
           </div>
-          <a href="contact.html#order-enquiry" class="btn btn-outline" style="width: 100%;">Enquire Starter</a>
         </div>
 
-        <!-- Commercial Tier (Featured) -->
         <div class="pricing-card featured">
-          <span class="pricing-badge">Recommended</span>
+          <span class="pricing-badge">MOST POPULAR</span>
           <div class="pricing-header">
-            <span class="pricing-category">Commercial Catering</span>
-            <h3 class="pricing-title">Restaurant Partner</h3>
-            <div class="pricing-price">₹18,500 <span>/ 100kg</span></div>
-            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.35rem;">(Demonstration Rate)</p>
+            <h3 class="pricing-title"><a href="service-details.html?service=wholesale">Commercial Kitchen</a></h3>
+            <p class="pricing-subtitle">For premium restaurants &amp; banquet halls</p>
+            <div class="pricing-price">
+              <span class="currency">₹22,000</span>
+              <span class="period">/ 100 kg batch</span>
+            </div>
           </div>
-          <div class="pricing-features">
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Up to 3 Custom Pickle Varieties</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Calibrated Salt &amp; Spice Profiles</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Choice of 5kg Buckets or Jars</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Private Brand Sticker Labels</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Priority Sun-Curing Dispatch</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Up to 2 recipe formulations</li>
+            <li><i class="fa-solid fa-check"></i> Custom sodium &amp; spice heat level</li>
+            <li><i class="fa-solid fa-check"></i> Choice of 1kg jars or 5kg drums</li>
+            <li><i class="fa-solid fa-check"></i> Proprietary recipe exclusivity contract</li>
+            <li><i class="fa-solid fa-check"></i> Priority scheduled recurring dispatch</li>
+          </ul>
+          <div class="pricing-cta">
+            <button type="button" class="btn btn-primary btn-open-service-modal" style="width: 100%;" data-service-name="Small-Batch Artisanal Pickle Preparation" data-package-name="Commercial Kitchen">
+              <i class="fa-solid fa-paper-plane"></i> Select Commercial Batch
+            </button>
           </div>
-          <a href="contact.html#order-enquiry" class="btn btn-primary" style="width: 100%;">Enquire Commercial</a>
         </div>
 
-        <!-- Enterprise Tier -->
         <div class="pricing-card">
+          <span class="pricing-badge">ENTERPRISE CONTRACT</span>
           <div class="pricing-header">
-            <span class="pricing-category">Wholesale &amp; Export</span>
-            <h3 class="pricing-title">Enterprise Contract</h3>
-            <div class="pricing-price">₹75,000 <span>/ 500kg</span></div>
-            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.35rem;">(Demonstration Rate)</p>
+            <h3 class="pricing-title"><a href="service-details.html?service=packaging">Private Label Retail</a></h3>
+            <p class="pricing-subtitle">For regional supermarket brands &amp; chains</p>
+            <div class="pricing-price">
+              <span class="currency">Custom</span>
+              <span class="period">Volume Contract</span>
+            </div>
           </div>
-          <div class="pricing-features">
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Unlimited Seasonal Varieties</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Dedicated Master Kitchen Artisan</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Complete Turnkey Private Label</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Export Quality Packing &amp; Barcoding</div>
-            <div class="pricing-feature-item"><i class="fa-solid fa-check"></i> Pan-India Freight Subsidies</div>
+          <ul class="pricing-features">
+            <li><i class="fa-solid fa-check"></i> Unlimited proprietary formulations</li>
+            <li><i class="fa-solid fa-check"></i> Complete FSSAI regulatory filing</li>
+            <li><i class="fa-solid fa-check"></i> Full retail carton &amp; shrink packaging</li>
+            <li><i class="fa-solid fa-check"></i> Bi-weekly quality audit reports</li>
+            <li><i class="fa-solid fa-check"></i> Pan-India distributor drop shipping</li>
+          </ul>
+          <div class="pricing-cta">
+            <button type="button" class="btn btn-outline btn-open-service-modal" style="width: 100%;" data-service-name="Small-Batch Artisanal Pickle Preparation" data-package-name="Private Label Retail">
+              <i class="fa-solid fa-paper-plane"></i> Request Enterprise Proposal
+            </button>
           </div>
-          <a href="contact.html#order-enquiry" class="btn btn-outline" style="width: 100%;">Enquire Enterprise</a>
         </div>
       </div>
     </div>
@@ -298,53 +319,111 @@
     <div class="container" style="max-width: 860px;">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-circle-question"></i> Clarifications</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title"><a href="#serviceFaq">Frequently Asked Questions</a></h2>
         <div class="ornament"><i class="fa-solid fa-comments ornament-icon"></i></div>
       </div>
 
-      <div class="accordion">
+      <div class="accordion" id="serviceFaqAccordion">
         <div class="accordion-item active">
-          <button type="button" class="accordion-header">
+          <button type="button" class="accordion-header" aria-expanded="true">
             <span>What is the typical curing turnaround time for custom batches?</span>
             <i class="fa-solid fa-chevron-down accordion-icon"></i>
           </button>
           <div class="accordion-body">
-            <p>Because we honor traditional solar curing without artificial accelerators, custom pickle batches take between 14 to 28 days depending on the produce (raw mangoes require 21 days, whereas shredded pickles like chundo take 14 days). Sun-dried papads can be completed in 7 to 10 days.</p>
+            <p>Because we honor traditional solar curing without chemical accelerators, small batches generally take 18 to 30 days depending on the produce variety, oil density, and prevailing sunlight intensity.</p>
           </div>
         </div>
 
         <div class="accordion-item">
-          <button type="button" class="accordion-header">
-            <span>Can we request our own family recipes to be replicated?</span>
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <span>Can we specify our own ancestral family recipe proportions?</span>
             <i class="fa-solid fa-chevron-down accordion-icon"></i>
           </button>
           <div class="accordion-body">
-            <p>Yes, absolutely! Many diaspora clients send us their grandmother's written spice measurements. Our master custodians review the ratios, prepare a pilot tasting jar, and upon your confirmation, produce the desired volume.</p>
+            <p>Absolutely. Over 40% of our private clients bring their grandmother's handwritten ingredient cards. Our master culinarians scale the proportions accurately while maintaining flavor integrity.</p>
           </div>
         </div>
 
         <div class="accordion-item">
-          <button type="button" class="accordion-header">
-            <span>How do your pickles achieve a 12-month shelf life without artificial preservatives?</span>
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <span>What packaging types are available for restaurant delivery?</span>
             <i class="fa-solid fa-chevron-down accordion-icon"></i>
           </button>
           <div class="accordion-body">
-            <p>Traditional preservation relies on natural science: thorough sun-drying to remove free moisture, exact concentrations of pure rock salt (which inhibits microbial growth), natural antioxidant properties of cold-pressed mustard oil, and the natural bio-active compounds in turmeric, fenugreek, and asafoetida (hing).</p>
+            <p>We supply food-grade 5kg and 10kg HDPE canisters with airtight secondary seals for commercial kitchens, or retail-ready 250g, 400g, 500g, and 1kg hexagonal glass jars.</p>
           </div>
         </div>
 
         <div class="accordion-item">
-          <button type="button" class="accordion-header">
-            <span>Do you offer door-to-door delivery across all pin codes in India?</span>
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <span>Is there a non-disclosure agreement (NDA) for custom recipes?</span>
             <i class="fa-solid fa-chevron-down accordion-icon"></i>
           </button>
           <div class="accordion-body">
-            <p>Yes. All consignments are packed in impact-resistant, multilayered bubble cartons with partition honeycombs to prevent glass jar vibration and delivered via trusted logistics partners.</p>
+            <p>Yes. All custom recipe consultations and formulations include a legally binding mutual non-disclosure agreement to protect your proprietary spice formulas.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       Section: Related Services Section
+       ========================================================================== -->
+  <section class="section section-alt" id="relatedServicesSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-kitchen-set"></i> Kitchen Craft Offerings</span>
+        <h2 class="section-title"><a href="services.html">Explore Other Kitchen Services</a></h2>
+        <div class="ornament"><i class="fa-solid fa-mortar-pestle ornament-icon"></i></div>
+        <p class="section-desc">
+          From traditional papad manufacturing to custom recipe advisory and high-volume catering supply.
+        </p>
+      </div>
+      <div class="related-services-grid" id="relatedServicesGrid"></div>
+    </div>
+  </section>
+
+    <!-- Modal: Service Custom Quote Enquiry -->
+  <div class="modal modal-backdrop" id="serviceEnquiryModal" role="dialog" aria-modal="true" aria-labelledby="serviceModalTitle" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="serviceModalTitle"><a href="services.html" style="color: inherit;">Service Custom Quote</a></h3>
+          <button type="button" class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="kitchen-form" id="serviceEnquiryForm">
+            <input type="hidden" id="serviceEnquiryField" name="serviceName" value="Small-Batch Artisanal Pickle Preparation">
+            <input type="hidden" id="servicePackageField" name="packageName" value="Bespoke Order">
+            <div class="form-group">
+              <label for="serviceCustomerName">Your Full Name *</label>
+              <input type="text" id="serviceCustomerName" name="customerName" class="form-control" placeholder="Enter your full name" required minlength="2">
+            </div>
+            <div class="form-group">
+              <label for="serviceCustomerPhone">Phone Number *</label>
+              <input type="tel" id="serviceCustomerPhone" name="customerPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+            <div class="form-group">
+              <label for="serviceCustomerEmail">Email Address</label>
+              <input type="email" id="serviceCustomerEmail" name="customerEmail" class="form-control" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label for="serviceEstimatedVolume">Estimated Volume / Target Date</label>
+              <input type="text" id="serviceEstimatedVolume" name="estimatedVolume" class="form-control" placeholder="e.g. 50 kg batch / Next month">
+            </div>
+            <div class="form-group">
+              <label for="serviceCustomNotes">Specific Requirements or Palate Notes</label>
+              <textarea id="serviceCustomNotes" name="customNotes" class="form-control" rows="3" placeholder="Describe recipe preferences, spice level, oil choice, or packaging needs..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Submit Service Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="toast-container" aria-live="polite"></div>
   <button type="button" class="back-to-top" aria-label="Scroll to top of page"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
@@ -367,7 +446,7 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Explore Pages</h4>
+          <h4><a href="index.html" class="footer-heading-link">Explore Pages</a></h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1 (General)</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Pickles Niche)</a></li>
@@ -380,11 +459,11 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Products &amp; More</h4>
+          <h4><a href="products.html" class="footer-heading-link">Products &amp; More</a></h4>
           <ul class="footer-links">
-            <li><a href="products.html?cat=pickles"><i class="fa-solid fa-jar"></i> Mango &amp; Lemon Pickles</a></li>
-            <li><a href="products.html?cat=papads"><i class="fa-solid fa-cookie"></i> Hand-Rolled Papads</a></li>
-            <li><a href="product-details.html"><i class="fa-solid fa-circle-info"></i> Product Details Page</a></li>
+            <li><a href="products.html?cat=pickles#productCatalog"><i class="fa-solid fa-jar"></i> Mango &amp; Lemon Pickles</a></li>
+            <li><a href="products.html?cat=papads#productCatalog"><i class="fa-solid fa-cookie"></i> Hand-Rolled Papads</a></li>
+            <li><a href="product-details.html?product=mango-pickle#productOverview"><i class="fa-solid fa-circle-info"></i> Product Details Page</a></li>
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
@@ -392,7 +471,7 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Direct Kitchen Contact</h4>
+          <h4><a href="contact.html" class="footer-heading-link">Direct Kitchen Contact</a></h4>
           <div class="footer-contact-list">
             <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>18, Heritage Courtyard, Gandhi Road, Varanasi, Uttar Pradesh 221001, India</span></div>
             <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></div>
@@ -401,7 +480,7 @@
           <div class="footer-fssai-box">
             <i class="fa-solid fa-shield-halved" style="color: var(--secondary); font-size: 1.5rem;"></i>
             <div class="fssai-text">
-              <h6>FSSAI License Certified</h6>
+              <h6><a href="about.html#certifications">FSSAI License Certified</a></h6>
               <p>Lic. No: 10022051000184 (Pure Hygiene)</p>
             </div>
           </div>
@@ -419,6 +498,7 @@
   <script src="js/rtl.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
 </body>
 </html>
 

@@ -1869,6 +1869,7 @@ p:last-child {
 /* ==========================================================================
    15. Modals & Toast Notifications
    ========================================================================== */
+.modal,
 .modal-backdrop {
   position: fixed;
   top: 0;
@@ -1884,9 +1885,10 @@ p:last-child {
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-normal);
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
+.modal.active,
 .modal-backdrop.active {
   opacity: 1;
   visibility: visible;
@@ -1905,6 +1907,7 @@ p:last-child {
   transition: all var(--transition-normal);
 }
 
+.modal.active .modal-dialog,
 .modal-backdrop.active .modal-dialog {
   transform: translateY(0) scale(1);
 }
@@ -2069,6 +2072,24 @@ p:last-child {
   width: 38px;
   height: 2px;
   background: var(--primary);
+}
+
+.footer-heading-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  transition: color var(--transition-fast);
+}
+
+.footer-heading-link:hover,
+.footer-heading-link:focus {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+body.dark-mode .footer-heading-link:hover,
+body.dark-mode .footer-heading-link:focus {
+  color: var(--secondary);
 }
 
 .footer-brand {
@@ -2748,4 +2769,185 @@ p:last-child {
 .popular-tip-card.is-active-story {
   border-color: var(--primary);
   box-shadow: 0 0 0 2px rgba(158, 42, 43, 0.2), var(--shadow-md);
+}
+
+
+/* ==========================================================================
+   Clickable Media, Service Links & Dynamic Grids
+   ========================================================================== */
+.service-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.service-title-link:hover {
+  color: var(--primary);
+}
+
+.service-image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-image-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.service-image-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.service-image-link:hover img {
+  transform: scale(1.03);
+}
+
+.product-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+.product-media-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-media-link img {
+  transform: scale(1.05);
+}
+
+.blog-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+.blog-media-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.blog-card:hover .blog-media-link img {
+  transform: scale(1.04);
+}
+
+.featured-article-image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+}
+.featured-article-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.featured-article-card:hover .featured-article-image-link img {
+  transform: scale(1.03);
+}
+
+.related-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@media (max-width: 991px) {
+  .related-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 640px) {
+  .related-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Blog Details Heading Visual & Layout */
+.blog-heading-banner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  margin: 1.25rem 0 1.25rem 0;
+  text-align: left;
+}
+
+.blog-heading-text {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.blog-heading-visual {
+  width: 160px;
+  height: 120px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 2px solid var(--secondary);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.blog-heading-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .blog-heading-banner-wrapper {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .blog-heading-visual {
+    width: 100%;
+    max-width: 240px;
+    height: 140px;
+  }
+}
+
+/* Universal Clickable Heading Links */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.section-title a, .product-title a, .service-title a, .blog-title a,
+.featured-article-body h2 a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+.section-title a:hover, .product-title a:hover, .service-title a:hover, .blog-title a:hover,
+.featured-article-body h2 a:hover {
+  color: var(--primary);
+  opacity: 0.92;
+}
+
+[data-theme="dark"] h1 a:hover,
+[data-theme="dark"] h2 a:hover,
+[data-theme="dark"] h3 a:hover,
+[data-theme="dark"] h4 a:hover,
+[data-theme="dark"] h5 a:hover,
+[data-theme="dark"] h6 a:hover,
+[data-theme="dark"] .section-title a:hover,
+[data-theme="dark"] .product-title a:hover,
+[data-theme="dark"] .service-title a:hover,
+[data-theme="dark"] .blog-title a:hover,
+[data-theme="dark"] .featured-article-body h2 a:hover {
+  color: var(--secondary);
 }

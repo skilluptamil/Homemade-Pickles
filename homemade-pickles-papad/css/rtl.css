@@ -204,7 +204,7 @@
 }
 
 /* Mobile Slide-out Menu in RTL */
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   [dir="rtl"] .nav-menu-wrapper {
     left: auto;
     right: 0;
@@ -227,5 +227,32 @@
 
 [dir="rtl"] .blog-reader-title,
 [dir="rtl"] .blog-reader-meta {
+  text-align: right;
+}
+
+
+/* Service Details & Modals in RTL */
+[dir="rtl"] .service-preview-card {
+  text-align: right;
+}
+[dir="rtl"] .service-preview-card .section-tag,
+[dir="rtl"] .service-preview-card .btn {
+  align-self: flex-start;
+}
+[dir="rtl"] .modal-header .modal-close {
+  margin-left: 0;
+  margin-right: auto;
+}
+[dir="rtl"] .pricing-features li i {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* RTL overrides for Blog Details Heading */
+[dir="rtl"] .blog-heading-banner-wrapper {
+  text-align: right;
+}
+[dir="rtl"] .blog-heading-banner-wrapper .section-title,
+[dir="rtl"] .blog-heading-banner-wrapper .section-desc {
   text-align: right;
 }

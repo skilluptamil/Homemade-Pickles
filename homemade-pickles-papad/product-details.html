@@ -83,14 +83,14 @@
        ========================================================================== -->
   <section class="page-hero" id="productDetailHero">
     <div class="container">
-      <span class="section-tag"><i class="fa-solid fa-jar"></i> Signature Pickle</span>
-      <h1 class="section-title">Traditional Mango Pickle (Avakaya Achar)</h1>
+      <span class="section-tag" id="productDetailTag"><i class="fa-solid fa-jar"></i> Signature Pickle</span>
+      <h1 class="section-title" id="productDetailHeroTitle"><a href="products.html">Traditional Mango Pickle (Avakaya Achar)</a></h1>
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
         <a href="products.html">Products</a>
         <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right"></i></span>
-        <span class="breadcrumb-current">Traditional Mango Pickle</span>
+        <span class="breadcrumb-current" id="productDetailBreadcrumb">Traditional Mango Pickle</span>
       </nav>
     </div>
   </section>
@@ -104,20 +104,23 @@
         <!-- Left: Image Gallery with Interactive Thumbnails -->
         <div>
           <div class="product-main-media">
-            <img src="assets/images/products/product-detail-main.jpg" id="mainProductImage" alt="Traditional Mango Pickle in Glass Jar" loading="eager">
-            <span class="badge badge-primary" style="position: absolute; top: 16px; left: 16px;">Authentic Recipe</span>
+            <img src="assets/images/products/pickle-mango.jpg" id="mainProductImage" alt="Traditional Mango Pickle in Glass Jar" loading="eager">
+            <span class="badge badge-primary" id="productMainBadge" style="position: absolute; top: 16px; left: 16px;">Authentic Recipe</span>
           </div>
 
           <!-- Thumbnails -->
-          <div class="product-thumb-grid">
-            <div class="gallery-thumb active" data-full-img="assets/images/products/product-detail-angle1.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid var(--primary); cursor: pointer;">
-              <img src="assets/images/products/product-detail-angle1.jpg" alt="Artisanal Mango Pickle Angle" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="product-thumb-grid" id="productThumbGrid">
+            <div class="gallery-thumb active" data-full-img="assets/images/products/pickle-mango.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid var(--primary); cursor: pointer;">
+              <img src="assets/images/products/pickle-mango.jpg" alt="Artisanal Mango Pickle Angle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="gallery-thumb" data-full-img="assets/images/products/product-detail-angle1.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; cursor: pointer;">
+              <img src="assets/images/products/product-detail-angle1.jpg" alt="Texture and Oil View" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="gallery-thumb" data-full-img="assets/images/products/product-detail-2.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; cursor: pointer;">
-              <img src="assets/images/products/product-detail-2.jpg" alt="Texture and Oil View" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/products/product-detail-2.jpg" alt="Ceramic Barni Curing View" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="gallery-thumb" data-full-img="assets/images/products/product-detail-3.jpg" style="height: 90px; border-radius: var(--radius-md); overflow: hidden; border: 2px solid transparent; cursor: pointer;">
-              <img src="assets/images/products/product-detail-3.jpg" alt="Ceramic Barni Curing View" style="width: 100%; height: 100%; object-fit: cover;">
+              <img src="assets/images/products/product-detail-3.jpg" alt="Sun Fermentation Curing View" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
           </div>
         </div>
@@ -128,10 +131,10 @@
             <div class="rating-stars" style="margin-bottom: 0;">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">(124 Verified Reviews)</span>
+            <span id="productReviewCount" style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">(124 Verified Reviews)</span>
           </div>
 
-          <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Traditional Mango Pickle (Avakaya)</h2>
+          <h2 id="productHeadingTitle" style="font-size: 2.2rem; margin-bottom: 1rem;"><a href="#orderEnquiryModal">Traditional Mango Pickle (Avakaya)</a></h2>
 
           <!-- Dynamic Price Display -->
           <div style="margin-bottom: 1.5rem;">
@@ -140,7 +143,7 @@
             </span>
           </div>
 
-          <p style="font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin-bottom: 1.75rem;">
+          <p id="productLongDesc" style="font-size: 1.05rem; color: var(--text-body); line-height: 1.75; margin-bottom: 1.75rem;">
             Hand-cut raw Ramkela green mangoes sun-dried with mineral rock salt and slowly infused with wooden-churned cold-pressed yellow mustard oil, split fenugreek, and fragrant Guntur chillies. Left to ferment naturally inside porcelain martabans under Varanasi's golden sun for 30 days.
           </p>
 
@@ -148,25 +151,25 @@
           <div class="mini-grid-2" style="margin-bottom: 2rem; padding: 1.25rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Spice Level</span>
-              <p style="font-size: 0.95rem; font-weight: 700; color: var(--spice-red); margin-bottom: 0;">
+              <p id="specSpiceLevel" style="font-size: 0.95rem; font-weight: 700; color: var(--spice-red); margin-bottom: 0;">
                 <i class="fa-solid fa-pepper-hot"></i> Medium-High Zest
               </p>
             </div>
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Shelf Life</span>
-              <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+              <p id="specShelfLife" style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
                 <i class="fa-regular fa-calendar-check"></i> 12 Months (Store in cool dry place)
               </p>
             </div>
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Base Oil</span>
-              <p style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+              <p id="specBaseOil" style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
                 <i class="fa-solid fa-bottle-droplet"></i> 100% Cold-Pressed Mustard Oil
               </p>
             </div>
             <div>
               <span style="font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted);">Artificial Additives</span>
-              <p style="font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 0;">
+              <p id="specAdditives" style="font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 0;">
                 <i class="fa-solid fa-shield-heart"></i> Zero Vinegar / Preservatives
               </p>
             </div>
@@ -177,7 +180,7 @@
             <label style="font-size: 0.95rem; font-weight: 700; display: block; margin-bottom: 0.75rem;">
               Select Available Size &amp; Packaging:
             </label>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div id="productSizeOptions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
               <label style="cursor: pointer;">
                 <input type="radio" name="packageSize" value="250g" data-price="₹160" style="display: none;">
                 <span class="btn btn-outline btn-sm" style="border-radius: var(--radius-md);">250g Glass Jar (₹160)</span>
@@ -215,7 +218,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-list-check"></i> Complete Transparency</span>
-        <h2 class="section-title">Ingredients &amp; Nutritional Goodness</h2>
+        <h2 class="section-title"><a href="#ingredientsSection">Ingredients &amp; Nutritional Goodness</a></h2>
         <div class="ornament"><i class="fa-solid fa-mortar-pestle ornament-icon"></i></div>
         <p class="section-desc">
           We never hide our ingredients. Every item listed here is food you recognize and trust.
@@ -225,10 +228,10 @@
       <div class="split-grid" style="gap: 3rem; align-items: stretch;">
         <div class="info-card">
           <div class="info-card-header">
-            <h4 class="info-card-title"><i class="fa-solid fa-carrot" style="color: var(--primary);"></i> Raw Ingredients List</h4>
+            <h4 class="info-card-title"><a href="#ingredientsSection"><i class="fa-solid fa-carrot" style="color: var(--primary);"></i> Raw Ingredients List</a></h4>
           </div>
           <div class="info-card-body">
-            <ul style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <ul id="productIngredientsList" style="display: flex; flex-direction: column; gap: 0.85rem;">
               <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <strong>Hand-Cut Green Mangoes</strong> <span>62%</span>
               </li>
@@ -253,10 +256,10 @@
 
         <div class="info-card">
           <div class="info-card-header">
-            <h4 class="info-card-title"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> Nutritional Values (per 100g)</h4>
+            <h4 class="info-card-title"><a href="#ingredientsSection"><i class="fa-solid fa-heart-pulse" style="color: var(--accent);"></i> Nutritional Values (per 100g)</a></h4>
           </div>
           <div class="info-card-body">
-            <ul style="display: flex; flex-direction: column; gap: 0.85rem;">
+            <ul id="productNutritionList" style="display: flex; flex-direction: column; gap: 0.85rem;">
               <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; gap: 1rem;">
                 <span>Energy</span> <strong>194 kcal</strong>
               </li>
@@ -289,27 +292,27 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag"><i class="fa-solid fa-bowl-food"></i> Perfect Pairings</span>
-        <h2 class="section-title">You May Also Relish</h2>
+        <h2 class="section-title"><a href="products.html">You May Also Relish</a></h2>
         <div class="ornament"><i class="fa-solid fa-circle-dot ornament-icon"></i></div>
       </div>
 
-      <div class="product-grid">
+      <div class="product-grid" id="relatedProductsGrid">
         <!-- Related 1: Lemon -->
         <div class="product-card">
           <div class="product-media">
             <span class="product-badge-overlay"><span class="badge badge-secondary">Zero Oil</span></span>
-            <img src="assets/images/products/detail-rel-lemon.jpg" alt="Sun-cured Lemon Pickle" loading="lazy">
+            <a href="product-details.html?product=lemon-pickle" style="display: block; width: 100%; height: 100%;"><img src="assets/images/products/detail-rel-lemon.jpg" alt="Sun-cured Lemon Pickle" loading="lazy"></a>
           </div>
           <div class="product-content">
             <span class="product-category">Citrus Pickles</span>
-            <h3 class="product-title"><a href="products.html">Sun-Cured Lemon Pickle</a></h3>
+            <h3 class="product-title"><a href="product-details.html?product=lemon-pickle">Sun-Cured Lemon Pickle</a></h3>
             <p class="product-desc">Kagzi lemons sun-matured with black salt and carom seeds.</p>
             <div class="product-meta">
               <span class="product-weight">500g Jar</span>
               <span class="product-price">₹260 <span class="demo-tag">(Demo)</span></span>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="product-details.html?product=lemon-pickle" class="btn btn-outline btn-sm">View Details</a>
               <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Sun-Cured Lemon Pickle" data-product-price="₹260">Enquire</button>
             </div>
           </div>
@@ -319,18 +322,18 @@
         <div class="product-card">
           <div class="product-media">
             <span class="product-badge-overlay"><span class="badge badge-spice">Fiery Rich</span></span>
-            <img src="assets/images/products/detail-rel-garlic.jpg" alt="Garlic Pod Pickle" loading="lazy">
+            <a href="product-details.html?product=garlic-pickle" style="display: block; width: 100%; height: 100%;"><img src="assets/images/products/detail-rel-garlic.jpg" alt="Garlic Pod Pickle" loading="lazy"></a>
           </div>
           <div class="product-content">
             <span class="product-category">Root Pickles</span>
-            <h3 class="product-title"><a href="products.html">Lahsun Garlic Pod Pickle</a></h3>
+            <h3 class="product-title"><a href="product-details.html?product=garlic-pickle">Lahsun Garlic Pod Pickle</a></h3>
             <p class="product-desc">Whole desi garlic cloves slow-tempered in unrefined sesame oil.</p>
             <div class="product-meta">
               <span class="product-weight">400g Jar</span>
               <span class="product-price">₹295 <span class="demo-tag">(Demo)</span></span>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="product-details.html?product=garlic-pickle" class="btn btn-outline btn-sm">View Details</a>
               <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Lahsun Garlic Pod Pickle" data-product-price="₹295">Enquire</button>
             </div>
           </div>
@@ -340,18 +343,18 @@
         <div class="product-card">
           <div class="product-media">
             <span class="product-badge-overlay"><span class="badge badge-primary">Amritsari</span></span>
-            <img src="assets/images/products/detail-rel-masala-papad.jpg" alt="Punjabi Masala Papad" loading="lazy">
+            <a href="product-details.html?product=masala-papad" style="display: block; width: 100%; height: 100%;"><img src="assets/images/products/detail-rel-masala-papad.jpg" alt="Punjabi Masala Papad" loading="lazy"></a>
           </div>
           <div class="product-content">
             <span class="product-category">Crispy Papads</span>
-            <h3 class="product-title"><a href="products.html">Punjabi Masala Papad</a></h3>
+            <h3 class="product-title"><a href="product-details.html?product=masala-papad">Punjabi Masala Papad</a></h3>
             <p class="product-desc">Crushed black pepper and cumin kneaded in protein-rich urad dough.</p>
             <div class="product-meta">
               <span class="product-weight">250g Pack</span>
               <span class="product-price">₹175 <span class="demo-tag">(Demo)</span></span>
             </div>
             <div class="product-actions">
-              <a href="products.html" class="btn btn-outline btn-sm">Explore</a>
+              <a href="product-details.html?product=masala-papad" class="btn btn-outline btn-sm">View Details</a>
               <button type="button" class="btn btn-primary btn-sm btn-enquire-product" data-product-name="Punjabi Masala Papad" data-product-price="₹175">Enquire</button>
             </div>
           </div>
@@ -368,7 +371,7 @@
       <div class="form-card" style="max-width: 780px; margin: 0 auto;">
         <div class="section-header" style="margin-bottom: 2rem;">
           <span class="section-tag"><i class="fa-solid fa-envelope"></i> Order This Item</span>
-          <h2 class="section-title">Enquire for Traditional Mango Pickle</h2>
+          <h2 class="section-title" id="enquirySectionTitle"><a href="#orderEnquiryModal">Enquire for Traditional Mango Pickle</a></h2>
           <p class="section-desc">Submit your details and delivery location. Our kitchen coordinator will confirm dispatch.</p>
         </div>
 
@@ -416,7 +419,7 @@
             </div>
 
             <div class="form-full">
-              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <button type="submit" id="btnSubmitEnquiry" class="btn btn-primary btn-lg" style="width: 100%;">
                 <i class="fa-solid fa-paper-plane"></i> Submit Mango Pickle Order Enquiry
               </button>
             </div>
@@ -432,7 +435,7 @@
       <div class="modal-header">
         <div>
           <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--secondary); font-weight: 700;">Express Order Enquiry</span>
-          <h3 class="modal-title" id="modalProductName">Selected Product</h3>
+          <h3 class="modal-title" id="modalProductName"><a href="products.html" style="color: inherit;">Selected Product</a></h3>
         </div>
         <button type="button" class="modal-close" data-close-modal aria-label="Close Modal">&times;</button>
       </div>
@@ -495,7 +498,7 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Explore Pages</h4>
+          <h4><a href="index.html" class="footer-heading-link">Explore Pages</a></h4>
           <ul class="footer-links">
             <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home 1 (General)</a></li>
             <li><a href="home-2.html"><i class="fa-solid fa-chevron-right"></i> Home 2 (Pickles Niche)</a></li>
@@ -508,11 +511,11 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Products &amp; More</h4>
+          <h4><a href="products.html" class="footer-heading-link">Products &amp; More</a></h4>
           <ul class="footer-links">
-            <li><a href="products.html?cat=pickles"><i class="fa-solid fa-jar"></i> Mango &amp; Lemon Pickles</a></li>
-            <li><a href="products.html?cat=papads"><i class="fa-solid fa-cookie"></i> Hand-Rolled Papads</a></li>
-            <li><a href="product-details.html"><i class="fa-solid fa-circle-info"></i> Product Details Page</a></li>
+            <li><a href="products.html?cat=pickles#productCatalog"><i class="fa-solid fa-jar"></i> Mango &amp; Lemon Pickles</a></li>
+            <li><a href="products.html?cat=papads#productCatalog"><i class="fa-solid fa-cookie"></i> Hand-Rolled Papads</a></li>
+            <li><a href="product-details.html?product=mango-pickle#productOverview"><i class="fa-solid fa-circle-info"></i> Product Details Page</a></li>
             <li><a href="blog.html"><i class="fa-solid fa-newspaper"></i> Recipes &amp; Food Blog</a></li>
             <li><a href="login.html"><i class="fa-solid fa-user-lock"></i> Customer Login</a></li>
             <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
@@ -520,7 +523,7 @@
         </div>
 
         <div class="footer-widget">
-          <h4>Direct Kitchen Contact</h4>
+          <h4><a href="contact.html" class="footer-heading-link">Direct Kitchen Contact</a></h4>
           <div class="footer-contact-list">
             <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>18, Heritage Courtyard, Gandhi Road, Varanasi, Uttar Pradesh 221001, India</span></div>
             <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></div>
@@ -529,7 +532,7 @@
           <div class="footer-fssai-box">
             <i class="fa-solid fa-shield-halved" style="color: var(--secondary); font-size: 1.5rem;"></i>
             <div class="fssai-text">
-              <h6>FSSAI License Certified</h6>
+              <h6><a href="about.html#certifications">FSSAI License Certified</a></h6>
               <p>Lic. No: 10022051000184 (Pure Hygiene)</p>
             </div>
           </div>
